@@ -41,9 +41,9 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 // EmailJS contact form handler
 // TODO: Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY = 'OlYiaTtacsyZJBGuy';
+const EMAILJS_SERVICE_ID = 'service_b6jcwqm';
+const EMAILJS_TEMPLATE_ID = 'template_mb0mgm6';
 
 const contactForm = document.getElementById('contact-form');
 const formNote = document.getElementById('form-note');
