@@ -39,17 +39,47 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Simple fake contact form handler
+// EmailJS contact form handler
+// TODO: Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
 const contactForm = document.getElementById('contact-form');
 const formNote = document.getElementById('form-note');
+const submitBtn = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
 
-if (contactForm && formNote) {
+if (contactForm && formNote && submitBtn) {
+    // Initialize EmailJS
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+
     contactForm.addEventListener('submit', event => {
         event.preventDefault();
 
-        formNote.textContent = 'Thank you. This demo form has captured your details locally. Connect it to your backend or email service to handle real submissions.';
-        formNote.style.color = '#a5b4fc';
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formNote.textContent = '';
+        formNote.className = 'form-note';
 
-        contactForm.reset();
+        // Send email via EmailJS
+        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
+            .then(() => {
+                // Success
+                formNote.textContent = 'Thank you! Your message has been sent. We\'ll be in touch soon.';
+                formNote.classList.add('form-note-success');
+                contactForm.reset();
+            })
+            .catch((error) => {
+                // Error
+                console.error('EmailJS error:', error);
+                formNote.textContent = 'Sorry, something went wrong. Please try again or email us directly.';
+                formNote.classList.add('form-note-error');
+            })
+            .finally(() => {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send message';
+            });
     });
 }
