@@ -44,7 +44,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     btn.textContent = 'Sending...';
     note.textContent = '';
 
-    emailjs.sendForm('service_f71as1r', 'template_mb0mgm6', this)
+    emailjs.sendForm('service_f71as1r', 'template_xdidmsf', this)
         .then(() => {
             note.textContent = 'Thanks! We will be in touch soon.';
             note.style.color = 'var(--success)';
