@@ -32,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // EmailJS form handling
-emailjs.init('cLf78Dl_06cNyl2Mj');
+emailjs.init('OlYiaTtacsyZJBGuy');
 
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
