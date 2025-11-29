@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jentix - Travel analytics for TMCs</title>
+    <title>Jentix - Travel Analytics & Reporting Software for TMCs | Consultant Performance Tracking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jentix gives travel management companies clear analytics on consultants, clients and suppliers in one place.">
+    <meta name="description" content="Travel analytics software for TMCs. Track consultant performance, client profitability and supplier spend from your mid office system. Built for travel management companies.">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="static/favicon/favicon.ico">
     <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
+
 <header class="site-header">
     <div class="container header-inner">
-        <div class="logo">
-            <span class="logo-mark">J</span>
-            <span class="logo-text">Jentix</span>
-        </div>
-
+        <a href="/" class="logo">
+            <img src="static/img/Logo_clear.png" alt="Jentix" class="logo-img">
+        </a>
         <nav class="nav">
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <span class="nav-toggle-line"></span>
@@ -22,7 +26,7 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#overview">Overview</a></li>
-                <li><a href="features.html">Features</a></li>
+                <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How it works</a></li>
                 <li><a href="#for-tmcs">For TMCs</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,16 +40,12 @@
     <section id="overview" class="hero">
         <div class="container hero-inner">
             <div class="hero-copy">
-                <h1>Travel analytics that work the way TMCs do</h1>
-                <p>
-                    Jentix pulls data from your booking tools, GDS and mid office into one clear view of
-                    consultant performance, client behaviour and supplier spend.
-                </p>
+                <h1>Travel Analytics that work the way TMCs do</h1>
+                <p>Jentix pulls data from your mid office system into one clear view of consultant performance, client behaviour and supplier spend.<br><em>More integrations coming soon.</em></p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">Book a demo</a>
-                    <a href="features.html" class="btn btn-outline">View features</a>
+                    <a href="#features" class="btn btn-outline">View features</a>
                 </div>
-
                 <div class="hero-badges">
                     <div class="badge">
                         <span class="badge-label">Built for</span>
@@ -57,32 +57,33 @@
                     </div>
                 </div>
             </div>
+            <div class="hero-image-container">
+                <img src="static/img/Hero_1120px.jpg" alt="Travel management company team reviewing analytics dashboard">
+            </div>
+        </div>
+    </section>
 
-            <div class="hero-panel">
-                <div class="hero-card">
-                    <h2>Live performance snapshot</h2>
-                    <div class="kpi-grid">
-                        <div class="kpi">
-                            <span class="kpi-label">Monthly revenue</span>
-                            <span class="kpi-value">£428k</span>
-                            <span class="kpi-tag kpi-tag-up">+12% vs last month</span>
-                        </div>
-                        <div class="kpi">
-                            <span class="kpi-label">Average margin</span>
-                            <span class="kpi-value">14.8%</span>
-                            <span class="kpi-tag">Custom logic per client</span>
-                        </div>
-                        <div class="kpi">
-                            <span class="kpi-label">Rework rate</span>
-                            <span class="kpi-value">3.2%</span>
-                            <span class="kpi-tag kpi-tag-down">Focused on back office fixes</span>
-                        </div>
-                    </div>
-                    <div class="hero-card-footer">
-                        Data and wording above are illustrative only.
-                    </div>
+    <!-- KPIs -->
+    <section class="kpi-section">
+        <div class="container">
+            <div class="kpi-grid">
+                <div class="kpi">
+                    <span class="kpi-label">Monthly revenue</span>
+                    <span class="kpi-value">£428k</span>
+                    <span class="kpi-tag kpi-tag-up">+12% vs last month</span>
+                </div>
+                <div class="kpi">
+                    <span class="kpi-label">Average margin</span>
+                    <span class="kpi-value">14.8%</span>
+                    <span class="kpi-tag">Custom logic per client</span>
+                </div>
+                <div class="kpi">
+                    <span class="kpi-label">Rework rate</span>
+                    <span class="kpi-value">3.2%</span>
+                    <span class="kpi-tag kpi-tag-down">Focused on back office fixes</span>
                 </div>
             </div>
+            <p class="kpi-note">Data and wording above are illustrative only.</p>
         </div>
     </section>
 
@@ -90,57 +91,39 @@
     <section id="features" class="section">
         <div class="container">
             <header class="section-header">
-                <h2>What Jentix helps you see</h2>
-                <p>Everything you care about in a TMC operation in one place, without digging through spreadsheets.</p>
+                <h2>TMC Analytics & Reporting Features</h2>
+                <p>Everything you care about in a travel management company operation in one place, without digging through spreadsheets.</p>
             </header>
 
             <div class="feature-grid">
                 <article class="feature-card">
-                    <h3>Consultant performance</h3>
-                    <p>
-                        Track bookings, revenue and margin by consultant, and understand where work is being reworked
-                        or picked up by back office teams.
-                    </p>
+                    <h3>Consultant Performance Tracking</h3>
+                    <p>Track bookings, revenue and margin by consultant, and understand where work is being reworked or picked up by back office teams.</p>
                 </article>
 
                 <article class="feature-card">
-                    <h3>Client and cost centre insight</h3>
-                    <p>
-                        See how clients are booking, how profitable they are and where policies may be driving
-                        unexpected behaviour or extra work for your team.
-                    </p>
+                    <h3>Client Profitability Analysis</h3>
+                    <p>See how clients are booking, how profitable they are and where policies may be driving unexpected behaviour or extra work for your team.</p>
                 </article>
 
                 <article class="feature-card">
-                    <h3>Supplier and channel view</h3>
-                    <p>
-                        Break down performance by airline, hotel, rail and other suppliers across GDS, NDC and online
-                        tools so you can support deals and targets.
-                    </p>
+                    <h3>Supplier Spend Analytics</h3>
+                    <p>Break down performance by airline, hotel, rail and other suppliers across GDS, NDC and online tools so you can support deals and targets.</p>
                 </article>
 
                 <article class="feature-card">
-                    <h3>Rework and quality metrics</h3>
-                    <p>
-                        Focus on the bookings that needed fixing by ticketing, operations or accounts, not on harmless
-                        consultant self edits.
-                    </p>
+                    <h3>Booking Quality Metrics</h3>
+                    <p>Focus on the bookings that needed fixing by ticketing, operations or accounts, not on harmless consultant self edits.</p>
                 </article>
 
                 <article class="feature-card">
-                    <h3>Operational workload</h3>
-                    <p>
-                        Understand where time is going across teams, and use that to shape training, automation and
-                        headcount decisions.
-                    </p>
+                    <h3>Operational Workload Reporting</h3>
+                    <p>Understand where time is going across teams, and use that to shape training, automation and headcount decisions.</p>
                 </article>
 
                 <article class="feature-card">
-                    <h3>Export and reporting</h3>
-                    <p>
-                        Pull data into your own reports or share focused views with management without exposing the
-                        complexity underneath.
-                    </p>
+                    <h3>Data Export & Custom Reports</h3>
+                    <p>Pull data into your own reports or share focused views with management without exposing the complexity underneath.</p>
                 </article>
             </div>
 
@@ -151,7 +134,7 @@
     </section>
 
     <!-- How it works -->
-    <section id="how-it-works" class="section section-alt">
+    <section id="how-it-works" class="section">
         <div class="container">
             <header class="section-header">
                 <h2>How Jentix fits into your stack</h2>
@@ -162,37 +145,25 @@
                 <div class="step">
                     <span class="step-number">1</span>
                     <h3>Connect data sources</h3>
-                    <p>
-                        Feed in exports from GDS, mid office, back office and online tools. Jentix is built around the
-                        way TMC data really looks.
-                    </p>
+                    <p>Feed in exports from GDS, mid office, back office and online tools. Jentix is built around the way TMC data really looks.</p>
                 </div>
 
                 <div class="step">
                     <span class="step-number">2</span>
                     <h3>Clean and standardise</h3>
-                    <p>
-                        Map consultants, clients and suppliers across systems so you can actually rely on the numbers
-                        in front of you.
-                    </p>
+                    <p>Map consultants, clients and suppliers across systems so you can actually rely on the numbers in front of you.</p>
                 </div>
 
                 <div class="step">
                     <span class="step-number">3</span>
                     <h3>Explore dashboards</h3>
-                    <p>
-                        Use clear dashboards to answer day to day questions on performance and dig into specific
-                        bookings when you need to.
-                    </p>
+                    <p>Use clear dashboards to answer day to day questions on performance and dig into specific bookings when you need to.</p>
                 </div>
 
                 <div class="step">
                     <span class="step-number">4</span>
                     <h3>Decide and act</h3>
-                    <p>
-                        Take decisions on incentives, training, supplier focus and client conversations backed by data,
-                        not guesswork.
-                    </p>
+                    <p>Take decisions on incentives, training, supplier focus and client conversations backed by data, not guesswork.</p>
                 </div>
             </div>
         </div>
@@ -201,24 +172,6 @@
     <!-- For TMCs -->
     <section id="for-tmcs" class="section">
         <div class="container for-tmcs-inner">
-            <div class="for-tmcs-copy">
-                <header class="section-header align-left">
-                    <h2>Built by someone who lives in TMC operations</h2>
-                    <p>
-                        Jentix is shaped around the reality of corporate travel operations, not generic SaaS ideas.
-                    </p>
-                </header>
-                <ul class="checklist">
-                    <li>Understands GDS, mid office and back office realities.</li>
-                    <li>Respects how consultants actually work day to day.</li>
-                    <li>Supports airline and supplier targets without losing sight of the client.</li>
-                    <li>Keeps data ownership and control with your business.</li>
-                </ul>
-                <p class="small-note">
-                    Specific integrations, features and pricing are agreed case by case during onboarding.
-                </p>
-            </div>
-
             <div class="for-tmcs-panel">
                 <div class="panel-card">
                     <h3>Example consultant view</h3>
@@ -230,18 +183,29 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="for-tmcs-copy">
+                <header class="section-header align-left">
+                    <h2>Built by someone who lives in TMC operations</h2>
+                    <p>Jentix is shaped around the reality of corporate travel operations, not generic SaaS ideas.</p>
+                </header>
+                <ul class="checklist">
+                    <li>Understands GDS, mid office and back office realities.</li>
+                    <li>Respects how consultants actually work day to day.</li>
+                    <li>Supports airline and supplier targets without losing sight of the client.</li>
+                    <li>Keeps data ownership and control with your business.</li>
+                </ul>
+                <p class="small-note">Specific integrations, features and pricing are agreed case by case during onboarding.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Contact / CTA -->
-    <section id="contact" class="section section-alt">
+    <!-- Contact -->
+    <section id="contact" class="section">
         <div class="container contact-inner">
             <div class="contact-copy">
                 <h2>Interested in Jentix for your TMC?</h2>
-                <p>
-                    Share a few details and how you currently track performance. We will follow up to arrange a short
-                    call and a walkthrough of the app.
-                </p>
+                <p>Share a few details and how you currently track performance. We will follow up to arrange a short call and a walkthrough of the app.</p>
             </div>
 
             <form class="contact-form" id="contact-form">
@@ -272,6 +236,10 @@
                     <textarea id="message" name="message" rows="4" placeholder="Short description of your current set up and what you want to improve."></textarea>
                 </div>
 
+                <div class="form-field">
+                    <div class="g-recaptcha" data-sitekey="6LdT_RssAAAAAEy-JVvifaQwlJfjkhZ-QhcHk9XC"></div>
+                </div>
+
                 <button type="submit" class="btn btn-primary btn-full">Send message</button>
                 <p class="form-note" id="form-note"></p>
             </form>
@@ -282,19 +250,15 @@
 <footer class="site-footer">
     <div class="container footer-inner">
         <div class="footer-left">
-            <div class="logo footer-logo">
-                <span class="logo-mark">J</span>
-                <span class="logo-text">Jentix</span>
-            </div>
-            <p class="footer-text">
-                Analytics for travel management companies that want clear, honest numbers on how their operation is
-                really performing.
-            </p>
+            <a href="/" class="logo footer-logo">
+                <img src="static/img/Logo_clear.png" alt="Jentix" class="logo-img">
+            </a>
+            <p class="footer-text">Analytics for travel management companies that want clear, honest numbers on how their operation is really performing.</p>
         </div>
         <div class="footer-right">
             <ul class="footer-links">
                 <li><a href="#overview">Overview</a></li>
-                <li><a href="features.html">Features</a></li>
+                <li><a href="#features">Features</a></li>
                 <li><a href="#how-it-works">How it works</a></li>
                 <li><a href="#for-tmcs">For TMCs</a></li>
                 <li><a href="#contact">Contact</a></li>
