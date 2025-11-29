@@ -202,11 +202,12 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-        <div class="container contact-inner">
-            <div class="contact-copy">
+        <div class="container contact-centered">
+            <header class="contact-header">
                 <h2>Interested in Jentix for your TMC?</h2>
                 <p>Share a few details and how you currently track performance. We will follow up to arrange a short call and a walkthrough of the app.</p>
-            </div>
+                <p class="contact-email">Or email us directly at <a href="mailto:sales@jentix.co.uk">sales@jentix.co.uk</a></p>
+            </header>
 
             <form class="contact-form" id="contact-form">
                 <div class="form-row">
@@ -226,14 +227,19 @@
                         <input type="text" id="company" name="company" placeholder="Your TMC name" required>
                     </div>
                     <div class="form-field">
-                        <label for="role">Role</label>
-                        <input type="text" id="role" name="role" placeholder="Head of Operations, Director, etc.">
+                        <label for="phone">Contact number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000" required>
                     </div>
                 </div>
 
                 <div class="form-field">
+                    <label for="role">Role</label>
+                    <input type="text" id="role" name="role" placeholder="Head of Operations, Director, etc." required>
+                </div>
+
+                <div class="form-field">
                     <label for="message">What would you like Jentix to help with?</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Short description of your current set up and what you want to improve."></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Short description of your current set up and what you want to improve." required></textarea>
                 </div>
 
                 <div class="form-field">

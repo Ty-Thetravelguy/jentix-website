@@ -383,15 +383,27 @@ body {
 .compact-list span:last-child { font-weight: 550; color: #e5e7eb; }
 
 /* Contact */
-.contact-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 2.7fr) minmax(0, 3fr);
-    gap: 2rem;
-    align-items: flex-start;
+.contact-centered {
+    max-width: 640px;
+    margin-inline: auto;
+    text-align: center;
 }
 
-.contact-copy h2 { margin: 0 0 0.8rem; font-size: 1.5rem; }
-.contact-copy p { color: var(--text-soft); font-size: 0.95rem; }
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.contact-header h2 { margin: 0 0 0.8rem; font-size: 1.5rem; }
+.contact-header p { color: var(--text-soft); font-size: 0.95rem; margin: 0 0 0.5rem; }
+
+.contact-email a {
+    color: var(--accent-pink);
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
 
 .contact-form {
     background: rgba(15, 23, 42, 0.95);
