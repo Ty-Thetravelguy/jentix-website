@@ -1,85 +1,62 @@
-// Mobile navigation toggle
+// Mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('.nav');
 
-if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-open');
-    });
+navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+});
 
-    navLinks.addEventListener('click', event => {
-        if (event.target.tagName === 'A') {
-            navLinks.classList.remove('nav-open');
-        }
-    });
-}
-
-// Smooth scroll with small offset for sticky header
+// Shrink header logo on scroll
 const header = document.querySelector('.site-header');
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', event => {
-        const targetId = link.getAttribute('href').slice(1);
-        const target = document.getElementById(targetId);
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
 
-        if (!target) {
-            return;
+// Smooth scroll with offset for sticky header
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerHeight = document.querySelector('.site-header').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            nav.classList.remove('nav-open');
         }
-
-        event.preventDefault();
-
-        const headerHeight = header ? header.offsetHeight : 0;
-        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerHeight - 8;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
     });
 });
 
-// EmailJS contact form handler
-// TODO: Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com
-const EMAILJS_PUBLIC_KEY = 'OlYiaTtacsyZJBGuy';
-const EMAILJS_SERVICE_ID = 'service_b6jcwqm';
-const EMAILJS_TEMPLATE_ID = 'template_mb0mgm6';
+// EmailJS form handling
+emailjs.init('cLf78Dl_06cNyl2Mj');
 
-const contactForm = document.getElementById('contact-form');
-const formNote = document.getElementById('form-note');
-const submitBtn = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-if (contactForm && formNote && submitBtn) {
-    // Initialize EmailJS
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    const btn = this.querySelector('button[type="submit"]');
+    const note = document.getElementById('form-note');
 
-    contactForm.addEventListener('submit', event => {
-        event.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    note.textContent = '';
 
-        // Disable button and show loading state
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-        formNote.textContent = '';
-        formNote.className = 'form-note';
-
-        // Send email via EmailJS
-        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
-            .then(() => {
-                // Success
-                formNote.textContent = 'Thank you! Your message has been sent. We\'ll be in touch soon.';
-                formNote.classList.add('form-note-success');
-                contactForm.reset();
-            })
-            .catch((error) => {
-                // Error
-                console.error('EmailJS error:', error);
-                formNote.textContent = 'Sorry, something went wrong. Please try again or email us directly.';
-                formNote.classList.add('form-note-error');
-            })
-            .finally(() => {
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send message';
-            });
-    });
-}
+    emailjs.sendForm('service_ovfvqsj', 'template_k1r4tus', this)
+        .then(() => {
+            note.textContent = 'Thanks! We will be in touch soon.';
+            note.style.color = 'var(--success)';
+            this.reset();
+        })
+        .catch((error) => {
+            note.textContent = 'Something went wrong. Please try again or email us directly.';
+            note.style.color = 'var(--danger)';
+            console.error('EmailJS error:', error);
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.textContent = 'Send message';
+        });
+});
