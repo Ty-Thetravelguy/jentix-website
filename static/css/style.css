@@ -52,7 +52,7 @@ body {
 .logo { display: inline-flex; align-items: center; text-decoration: none; }
 
 .logo-img {
-    height: 48px;
+    height: 55px;
     width: auto;
     transition: height 0.2s ease-out;
 }
