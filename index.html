@@ -1,284 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Jentix - Travel Analytics & Reporting Software for TMCs | Consultant Performance Tracking</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travel analytics software for TMCs. Track consultant performance, client profitability and supplier spend from your mid office system. Built for travel management companies.">
-    <link rel="canonical" href="https://jentix.io/">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="static/css/style.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jentix | Travel Analytics, Reporting &amp; Client Portal for TMCs</title>
+<meta name="description" content="Jentix is a travel intelligence platform for travel management companies. Unify every flight, hotel, rail and car booking into one record, track consultant and team performance, run 30+ client-ready reports, and give your clients a secure, white-label self-serve portal.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://jentix.io/">
+<meta name="theme-color" content="#070d1f">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Open Graph / social + AI link unfurling -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jentix">
+<meta property="og:title" content="Jentix | Travel Analytics, Reporting & Client Portal for TMCs">
+<meta property="og:description" content="One platform for travel management companies: unify every booking, track performance, run client-ready reports, and give clients a secure self-serve portal.">
+<meta property="og:url" content="https://jentix.io/">
+<meta property="og:image" content="https://jentix.io/static/img/Hero_1120px.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jentix | Travel Analytics & Client Portal for TMCs">
+<meta name="twitter:description" content="One platform for travel management companies: unify every booking, track performance, run client-ready reports, and give clients a secure portal.">
+<meta name="twitter:image" content="https://jentix.io/static/img/Hero_1120px.jpg">
+<!-- Structured data: helps Google, AI Overviews and assistants understand what Jentix is -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://jentix.io/#org",
+      "name": "Jentix",
+      "legalName": "Jentix Ltd",
+      "url": "https://jentix.io/",
+      "logo": "https://jentix.io/static/img/Jentix - White text - No background_v2.png",
+      "email": "sales@jentix.co.uk",
+      "address": {"@type": "PostalAddress", "streetAddress": "82A James Carter Road", "addressLocality": "Mildenhall", "postalCode": "IP28 7DE", "addressCountry": "GB"},
+      "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "sales@jentix.co.uk"}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jentix.io/#website",
+      "name": "Jentix",
+      "url": "https://jentix.io/",
+      "publisher": {"@id": "https://jentix.io/#org"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Jentix",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://jentix.io/",
+      "publisher": {"@id": "https://jentix.io/#org"},
+      "description": "Jentix is a travel intelligence platform for travel management companies (TMCs). It unifies every flight, hotel, rail, car and transfer booking into one record, with performance analytics, supplier analytics, a client-safe self-serve client portal, 30+ reports, summary invoicing and white-label branding.",
+      "audience": {"@type": "Audience", "audienceType": "Travel Management Companies"},
+      "featureList": [
+        "Unified travel record for flights, hotels, rail, car and transfers",
+        "Consultant and team performance analytics",
+        "Supplier analytics and drill-downs",
+        "Client-safe self-serve client portal",
+        "30+ self-serve reports with PDF, CSV and Excel export",
+        "Summary invoicing and accounts dashboard",
+        "Trip itineraries",
+        "White-label branding"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is Jentix?","acceptedAnswer":{"@type":"Answer","text":"Jentix is a travel intelligence platform for travel management companies (TMCs). It captures every flight, hotel, rail, car and transfer booking in one record and turns it into live performance analytics, client-ready reporting, invoicing and a secure client portal."}},
+        {"@type":"Question","name":"Who is Jentix for?","acceptedAnswer":{"@type":"Answer","text":"Travel management companies and corporate travel agencies that want clear, live numbers on consultant, team and client performance, and a professional self-serve portal for their clients."}},
+        {"@type":"Question","name":"What types of bookings does Jentix handle?","acceptedAnswer":{"@type":"Answer","text":"Flights, hotels, rail, car hire and transfers, all captured in a single travel record."}},
+        {"@type":"Question","name":"Can our clients see their own travel data?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jentix includes a secure, white-label client portal where your corporate clients self-serve their own travel, trips and reports, with a hard guard that stops your margin, markup and supplier costs from ever appearing."}},
+        {"@type":"Question","name":"What reporting is included?","acceptedAnswer":{"@type":"Answer","text":"A library of 30+ reports you can run, filter and export to PDF, CSV or Excel, and you can share a client-facing report straight to a client's dashboard. Reporting is live on the bookings you make today."}},
+        {"@type":"Question","name":"Can we use our own branding?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jentix is white-label, so the platform and the client portal carry your own logo and colours."}},
+        {"@type":"Question","name":"How do we get started?","acceptedAnswer":{"@type":"Answer","text":"Book a demo and we will walk you through Jentix on data that looks like yours."}}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+:root{
+  --bg:#070d1f; --bg2:#0a1430; --panel:#0e1c3c; --line:#1c2c52;
+  --ink:#eef3ff; --muted:#92a3cc; --orange:#ff7a1a; --orange2:#ffae5e;
+  --blue:#3aa0ff; --blue2:#7cc6ff;
+  --display:'Space Grotesk',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--display);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+/* full-width (container-fluid style): fills the page edge-to-edge with fluid
+   gutters instead of a narrow centred column. */
+.wrap{width:100%;max-width:none;margin:0;padding:0 clamp(20px,5vw,96px)}
+.mono{font-family:var(--mono)}
+.kicker{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue2)}
+
+/* background field */
+.field{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(900px 500px at 78% -8%,rgba(255,122,26,.16),transparent 60%),
+    radial-gradient(800px 600px at 8% 12%,rgba(58,160,255,.16),transparent 60%),
+    linear-gradient(var(--bg),var(--bg2));}
+.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(120,150,220,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,150,220,.05) 1px,transparent 1px);
+  background-size:54px 54px;mask-image:radial-gradient(circle at 50% 30%,#000,transparent 85%)}
+main,header,footer{position:relative;z-index:1}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+  background:rgba(7,13,31,.62);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo-img{height:30px;display:block}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+.nav-links a{font-size:.92rem;color:var(--muted);transition:.2s}
+.nav-links a:hover{color:var(--ink)}
+/* the nav CTA is a button, not a muted link -- keep its text crisp white */
+.nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#fff}
+/* bigger logo without growing the 74px bar */
+.nav .logo-img{height:46px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:.92rem;
+  padding:11px 20px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:.2s;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,#ef6410,#d94e07);color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(255,122,26,.34)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(255,122,26,.5)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue2)}
+.nav-toggle{display:none;background:none;border:0;color:var(--ink);cursor:pointer}
+
+/* hero */
+.hero{padding:84px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin:18px 0 0}
+.hero h1 .flip{color:var(--orange);position:relative;display:inline-block;min-width:5ch}
+.hero p.sub{font-size:1.18rem;color:var(--muted);margin:22px 0 30px;max-width:33ch}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.tag{font-family:var(--mono);font-size:.72rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.tag b{color:var(--blue2);font-weight:700}
+
+/* hero viz */
+.viz{position:relative;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(20,34,68,.6),rgba(10,20,48,.6));
+  padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.viz-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.viz-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(255,122,26,.18)}
+.viz svg{width:100%;height:auto;display:block}
+.viz-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.chip{border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:rgba(8,16,38,.6)}
+.chip .n{font-family:var(--mono);font-weight:700;font-size:1.3rem;color:var(--ink)}
+.chip .l{font-size:.7rem;color:var(--muted)}
+
+/* marquee strip */
+.strip{border-block:1px solid var(--line);background:rgba(10,20,48,.5);overflow:hidden}
+.strip-inner{display:flex;gap:54px;padding:16px 0;white-space:nowrap;animation:slide 28s linear infinite;font-family:var(--mono);color:var(--muted);font-size:.86rem}
+.strip-inner span b{color:var(--orange2)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* sections */
+.section{padding:92px 0}
+.sec-head{max-width:60ch;margin-bottom:46px}
+.sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:700;letter-spacing:-.02em;line-height:1.07;margin-top:12px}
+.sec-head p{color:var(--muted);font-size:1.12rem;margin-top:14px}
+
+/* feature cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:16px;padding:24px;background:linear-gradient(180deg,rgba(16,28,60,.7),rgba(9,17,40,.7));position:relative;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(58,160,255,.5);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(300px 120px at var(--mx,50%) 0,rgba(255,122,26,.12),transparent 70%);opacity:0;transition:.3s}
+.card:hover::after{opacity:1}
+.card .ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(58,160,255,.12);border:1px solid rgba(58,160,255,.3);margin-bottom:16px;color:var(--blue2)}
+.card h3{font-size:1.12rem;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.94rem}
+.card .ico svg{width:20px;height:20px}
+
+/* showcase */
+.show{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.show .panel{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(16,28,60,.85),rgba(9,17,40,.85));padding:20px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.panel-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.panel-row:last-child{border-bottom:0}
+.panel-row .v{font-family:var(--mono);color:var(--blue2)}
+.bars{display:flex;align-items:flex-end;gap:8px;height:120px;margin:10px 0 4px}
+.bar{flex:1;background:linear-gradient(var(--orange),#ff5e0f);border-radius:6px 6px 0 0;height:var(--h);transition:height 1.1s cubic-bezier(.2,.8,.2,1)}
+.lock{display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:.78rem;color:var(--orange2);border:1px solid rgba(255,122,26,.35);border-radius:999px;padding:6px 12px;margin-bottom:16px}
+
+/* cta */
+.cta{margin:30px 0 96px}
+.cta-box{border:1px solid var(--line);border-radius:22px;padding:60px 40px;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(700px 300px at 50% 0,rgba(255,122,26,.18),transparent 65%),linear-gradient(180deg,rgba(16,28,60,.8),rgba(9,17,40,.8))}
+.cta-box h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.02em}
+.cta-box p{color:var(--muted);margin:14px auto 28px;max-width:46ch}
+
+/* the full circle (loop) */
+.loop-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.loop-vis svg{width:100%;max-width:360px;height:auto;display:block;margin:0 auto}
+.loop-arc{transform-origin:160px 160px;animation:spin 7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loop-node text{fill:var(--muted);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em}
+.loop-center{fill:var(--ink);font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.02em}
+.loop-center2{fill:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.16em}
+.loop-steps{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.loop-step{display:flex;gap:14px;border:1px solid var(--line);border-radius:14px;padding:18px;background:linear-gradient(180deg,rgba(16,28,60,.6),rgba(9,17,40,.6))}
+.loop-step .ls-n{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--orange);line-height:1}
+.loop-step h3{font-size:1.05rem;font-weight:600;margin-bottom:5px}
+.loop-step p{color:var(--muted);font-size:.9rem}
+
+/* FAQ */
+.faq{max-width:920px;display:grid;gap:12px}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,rgba(16,28,60,.6),rgba(9,17,40,.6));overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;font-size:1.04rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:var(--orange);font-size:1.5rem;line-height:1;transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .faq-a{padding:0 22px 20px;color:var(--muted);font-size:.97rem;max-width:80ch}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.contact-h{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:700;letter-spacing:-.02em;margin-top:12px;line-height:1.08}
+.contact-sub{color:var(--muted);font-size:1.1rem;margin-top:14px;max-width:42ch}
+.contact-email{color:var(--muted);margin-top:18px}.contact-email a{color:var(--blue2)}
+.contact-form{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(16,28,60,.7),rgba(9,17,40,.7));padding:28px;display:grid;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-form label{display:flex;flex-direction:column;gap:7px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.contact-form input,.contact-form textarea{font-family:var(--display);background:rgba(7,13,31,.6);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink);font-size:.95rem;font-weight:400;text-transform:none;letter-spacing:normal;width:100%}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px rgba(58,160,255,.18)}
+.contact-form textarea{resize:vertical;min-height:120px}
+.btn-full{width:100%;justify-content:center}
+.form-note{font-size:.92rem;min-height:1.2em;margin:0;color:var(--blue2)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12,28,.6)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.foot p{color:var(--muted);font-size:.9rem;margin-top:14px;max-width:42ch}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;list-style:none}
+.foot-links a{color:var(--muted);font-size:.9rem}
+.foot-meta{color:#5e6e92;font-size:.78rem;margin-top:22px;font-family:var(--mono)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(42px);transition:opacity .6s ease,transform .85s cubic-bezier(.16,.84,.28,1)}
+.rv.in{opacity:1;transform:none}
+.rv-l{opacity:0;transform:translateX(-56px);transition:opacity .7s ease,transform .9s cubic-bezier(.16,.84,.28,1)}
+.rv-r{opacity:0;transform:translateX(56px);transition:opacity .7s ease,transform .9s cubic-bezier(.16,.84,.28,1)}
+.rv-l.in,.rv-r.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+/* feature cards pop in: lift + scale, cascading across the grid */
+.cards .card.rv{transform:translateY(54px) scale(.94)}
+.cards .card.rv.in{transform:none}
+
+@media(max-width:900px){
+  .hero-grid,.show,.foot,.loop-grid,.contact-grid{grid-template-columns:1fr}
+  .loop-steps,.form-row{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .hero p.sub{max-width:none}
+  .nav-toggle{display:block;font-size:1.5rem;line-height:1}
+  /* working mobile menu: hamburger drops the links + CTA down from the bar */
+  .nav-links{position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;
+    background:rgba(7,13,31,.98);border-bottom:1px solid var(--line);padding:12px clamp(20px,5vw,96px) 20px;
+    transform:translateY(-14px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease}
+  header.open .nav-links{transform:none;opacity:1;pointer-events:auto}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:13px 0;font-size:1.02rem}
+  .nav-links a.btn-primary{display:inline-flex;margin-top:10px}
+}
+@media(max-width:560px){.cards{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
+<div class="field"></div><div class="grid-lines"></div>
 
-<header class="site-header">
-    <div class="container header-inner">
-        <a href="/" class="logo">
-            <img src="static/img/Jentix - White text - No background_v2.png" alt="Jentix" class="logo-img">
-        </a>
-        <nav class="nav">
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How it works</a></li>
-                <li><a href="#for-tmcs">For TMCs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#"><img class="logo-img" src="static/img/Jentix%20-%20White%20text%20-%20No%20background_v2.png" alt="Jentix"></a>
+    <nav><ul class="nav-links">
+      <li><a href="#features">Platform</a></li>
+      <li><a href="#reporting">Reporting</a></li>
+      <li><a href="#portal">Client portal</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="btn btn-primary">Book a demo</a></li>
+    </ul></nav>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </div>
 </header>
 
 <main>
-    <!-- Hero -->
-    <section id="overview" class="hero">
-        <div class="container hero-inner">
-            <div class="hero-copy">
-                <h1>Travel Analytics that work the way TMCs do</h1>
-                <p>Jentix pulls data from your mid office system into one clear view of consultant performance, client behaviour and supplier spend.<br><em>More integrations coming soon.</em></p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Book a demo</a>
-                    <a href="#features" class="btn btn-outline">View features</a>
-                </div>
-                <div class="hero-badges">
-                    <div class="badge">
-                        <span class="badge-label">Built for</span>
-                        <span class="badge-value">Travel management companies</span>
-                    </div>
-                    <div class="badge">
-                        <span class="badge-label">Focus areas</span>
-                        <span class="badge-value">Consultants, clients, suppliers</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image-container">
-                <img src="static/img/Hero_1120px.jpg" alt="Travel management company team reviewing analytics dashboard">
-            </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Travel intelligence for TMCs</span>
+      <h1>Every booking.<br>One <span class="flip" id="flip">living</span> record.</h1>
+      <p class="sub">Jentix turns every flight, hotel, rail and car booking into one clear, living view of how your travel business performs - and lets your clients see their own.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Book a demo &rarr;</a>
+        <a href="#features" class="btn btn-ghost">See the platform</a>
+      </div>
+      <div class="hero-tags">
+        <span class="tag"><b>5</b> travel types &rarr; <b>1</b> record</span>
+        <span class="tag"><b>30+</b> reports</span>
+        <span class="tag">client-safe portal</span>
+      </div>
+    </div>
+    <div class="viz">
+      <div class="viz-head"><span class="kicker">live</span><span class="viz-dot"></span></div>
+      <svg viewBox="0 0 460 230" id="heroSvg" aria-hidden="true">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3aa0ff"/><stop offset="1" stop-color="#ff7a1a"/>
+          </linearGradient>
+        </defs>
+        <line x1="14" y1="200" x2="446" y2="200" stroke="#1c2c52" stroke-width="1"/>
+        <g id="vbars">
+          <rect x="22"  y="200" width="22" height="0" rx="3" fill="#244a8a" data-h="44"/>
+          <rect x="54"  y="200" width="22" height="0" rx="3" fill="#2f6fb8" data-h="70"/>
+          <rect x="86"  y="200" width="22" height="0" rx="3" fill="#2a5da0" data-h="52"/>
+          <rect x="118" y="200" width="22" height="0" rx="3" fill="#3a8fdf" data-h="96"/>
+          <rect x="150" y="200" width="22" height="0" rx="3" fill="#2f6fb8" data-h="64"/>
+          <rect x="182" y="200" width="22" height="0" rx="3" fill="#ff7a1a" data-h="120"/>
+          <rect x="214" y="200" width="22" height="0" rx="3" fill="#3a8fdf" data-h="80"/>
+          <rect x="246" y="200" width="22" height="0" rx="3" fill="#ff7a1a" data-h="134"/>
+          <rect x="278" y="200" width="22" height="0" rx="3" fill="#46a6ff" data-h="72"/>
+          <rect x="310" y="200" width="22" height="0" rx="3" fill="#ff9d4d" data-h="108"/>
+          <rect x="342" y="200" width="22" height="0" rx="3" fill="#3a8fdf" data-h="60"/>
+          <rect x="374" y="200" width="22" height="0" rx="3" fill="#ff7a1a" data-h="126"/>
+          <rect x="406" y="200" width="22" height="0" rx="3" fill="#5bb6ff" data-h="88"/>
+        </g>
+        <path d="M16,150 C120,150 150,80 240,86 C330,92 360,56 444,46" fill="none" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="520" stroke-dashoffset="520" id="route" opacity=".9"/>
+        <circle r="4.5" fill="#fff" id="pip"><animateMotion dur="3.4s" repeatCount="indefinite" path="M16,150 C120,150 150,80 240,86 C330,92 360,56 444,46"/></circle>
+      </svg>
+      <div class="viz-foot">
+        <div class="chip"><div class="n" data-count="16.2" data-suffix="m" data-prefix="&pound;">0</div><div class="l">spend analysed</div></div>
+        <div class="chip"><div class="n" data-count="100" data-suffix="%">0</div><div class="l">client-safe</div></div>
+        <div class="chip"><div class="n" data-count="5" data-arrow="1">0</div><div class="l">types, one model</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="strip-inner" id="strip">
+  <span>Flights <b>/</b> Hotels <b>/</b> Rail <b>/</b> Car <b>/</b> Transfers</span>
+  <span>Consultant &amp; team performance</span><span>Supplier drill-downs</span>
+  <span>Self-serve client reporting</span><span>Summary invoicing</span><span>White-label, your brand</span>
+  <span>Flights <b>/</b> Hotels <b>/</b> Rail <b>/</b> Car <b>/</b> Transfers</span>
+  <span>Consultant &amp; team performance</span><span>Supplier drill-downs</span>
+  <span>Self-serve client reporting</span><span>Summary invoicing</span><span>White-label, your brand</span>
+</div></div>
+
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">The platform</span>
+      <h2>One platform, built on one record.</h2>
+      <p>Performance, suppliers, clients, reporting and billing - all working off the same single travel record, so your numbers always reconcile.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv d1"><div class="ico">{IC_LAYERS}</div><h3>One unified record</h3><p>Every flight, hotel, rail, car and transfer booking lives in a single model - no five spreadsheets, one truth.</p></article>
+      <article class="card rv d2"><div class="ico">{IC_CHART}</div><h3>Performance analytics</h3><p>Bookings, turnover and margin by consultant, team, division or agency - in real time, attributed to who did the work.</p></article>
+      <article class="card rv d3"><div class="ico">{IC_TRUCK}</div><h3>Supplier analytics</h3><p>Drill into airlines, rail, car and hotels - volumes, fares versus taxes, content mix - to back your deals and targets.</p></article>
+      <article class="card rv d1"><div class="ico">{IC_SHIELD}</div><h3>Client portal, client-safe</h3><p>Clients log in to see their own travel, trips and reports. Your margin and markup can never appear - guaranteed.</p></article>
+      <article class="card rv d2"><div class="ico">{IC_REPORT}</div><h3>Self-serve reporting</h3><p>30+ ready reports. Pick one, set the criteria, run and export to PDF, CSV or Excel - or pin it to a client's dashboard.</p></article>
+      <article class="card rv d3"><div class="ico">{IC_INVOICE}</div><h3>Invoicing &amp; accounts</h3><p>Summary invoicing on real billing cycles, with an accounts dashboard that shows exactly what is ready to draft and send.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="loop" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">The Jentix loop</span>
+      <h2>Book it, report it, invoice it - one full circle.</h2>
+      <p>Jentix closes the loop between the booking your consultant just made and the numbers you report on - live, and always reconciled to the invoice.</p></div>
+    <div class="loop-grid">
+      <div class="loop-vis rv-l">
+        <svg viewBox="0 0 320 320" aria-hidden="true">
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3aa0ff"/><stop offset="1" stop-color="#ff7a1a"/></linearGradient></defs>
+          <circle cx="160" cy="160" r="120" fill="none" stroke="#1c2c52" stroke-width="2"/>
+          <circle class="loop-arc" cx="160" cy="160" r="120" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round" stroke-dasharray="150 600"/>
+          <g class="loop-node"><circle cx="160" cy="40" r="7" fill="#3aa0ff"/><text x="160" y="22" text-anchor="middle">BOOK</text></g>
+          <g class="loop-node"><circle cx="280" cy="160" r="7" fill="#7cc6ff"/><text x="280" y="150" text-anchor="middle">REPORT</text></g>
+          <g class="loop-node"><circle cx="160" cy="280" r="7" fill="#ff9d4d"/><text x="160" y="304" text-anchor="middle">INVOICE</text></g>
+          <g class="loop-node"><circle cx="40" cy="160" r="7" fill="#ff7a1a"/><text x="40" y="150" text-anchor="middle">RECONCILE</text></g>
+          <text x="160" y="156" text-anchor="middle" class="loop-center">LIVE</text>
+          <text x="160" y="176" text-anchor="middle" class="loop-center2">FULL CIRCLE</text>
+        </svg>
+      </div>
+      <div class="loop-steps">
+        <div class="loop-step rv d1"><span class="ls-n">01</span><div><h3>Book</h3><p>Consultants book; every flight, hotel, rail and car is captured in Jentix the moment it's made.</p></div></div>
+        <div class="loop-step rv d2"><span class="ls-n">02</span><div><h3>Report</h3><p>The instant it's captured it's reportable - live reporting on the business you're writing today, with no month-end wait.</p></div></div>
+        <div class="loop-step rv d3"><span class="ls-n">03</span><div><h3>Invoice</h3><p>The same booking is sent through to the back office for invoicing - entered once, no re-keying.</p></div></div>
+        <div class="loop-step rv d4"><span class="ls-n">04</span><div><h3>Reconcile</h3><p>Invoice numbers return overnight and tie to every booking automatically, so your figures always reconcile.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="portal" style="padding-top:0">
+  <div class="wrap show">
+    <div class="rv-l">
+      <span class="lock">{IC_LOCK} client-safe by design</span>
+      <div class="sec-head" style="margin-bottom:22px"><h2>Give clients their own view - without giving away yours.</h2>
+        <p>A live, branded portal where your corporate clients explore their own spend, trips and reports. A hard guard strips every margin, markup and supplier cost before it ever reaches them.</p></div>
+      <ul style="list-style:none;display:grid;gap:10px;color:var(--muted)">
+        <li>{TICK} Their travel, trips and itineraries - self-serve, anytime</li>
+        <li>{TICK} Reports you share land straight on their dashboard</li>
+        <li>{TICK} Your logo, your colours - white-label throughout</li>
+      </ul>
+    </div>
+    <div class="panel rv-r">
+      <div class="panel-row"><span class="mono kicker" style="color:var(--muted)">ACME TRAVEL &middot; portal</span><span class="viz-dot"></span></div>
+      <div class="bars" id="bars2">
+        <div class="bar" style="--h:40%"></div><div class="bar" style="--h:70%"></div><div class="bar" style="--h:52%"></div>
+        <div class="bar" style="--h:88%"></div><div class="bar" style="--h:64%"></div><div class="bar" style="--h:96%"></div>
+      </div>
+      <div class="panel-row"><span>Total travel spend</span><span class="v">&pound;1.84m</span></div>
+      <div class="panel-row"><span>Trips this quarter</span><span class="v">214</span></div>
+      <div class="panel-row"><span>Top route</span><span class="v">LHR &rarr; JFK</span></div>
+      <div class="panel-row"><span>Margin / markup</span><span class="v" style="color:var(--muted)">hidden</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reporting" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">Reporting</span>
+      <h2>Answers in minutes, not spreadsheets.</h2>
+      <p>A library of reports built around how a TMC really works - expenditure by transaction, spend breakdowns, supplier yield, invoice summaries - each one runnable, exportable and shareable.</p></div>
+    <div class="cards">
+      <article class="card rv d1"><div class="ico">{IC_REPORT}</div><h3>Run &amp; refine</h3><p>Pick a report, set the period and criteria - travellers, routes, references, vendors - and run it live.</p></article>
+      <article class="card rv d2"><div class="ico">{IC_EXPORT}</div><h3>Export anywhere</h3><p>Branded PDF, CSV or Excel in a click - ready for the board pack or the client meeting.</p></article>
+      <article class="card rv d3"><div class="ico">{IC_PIN}</div><h3>Share to a client</h3><p>Save a client-facing report straight onto that company's dashboard, under your label.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
+    <div class="faq rv">
+      <details class="faq-item"><summary>What is Jentix?</summary><div class="faq-a">A travel intelligence platform for travel management companies. It captures every flight, hotel, rail, car and transfer booking in one record and turns it into live performance analytics, client-ready reporting, invoicing and a secure client portal.</div></details>
+      <details class="faq-item"><summary>Who is Jentix for?</summary><div class="faq-a">Travel management companies and corporate travel agencies that want clear, live numbers on consultant, team and client performance - and a professional self-serve portal for their clients.</div></details>
+      <details class="faq-item"><summary>What types of bookings does it handle?</summary><div class="faq-a">Flights, hotels, rail, car hire and transfers, all captured in a single travel record.</div></details>
+      <details class="faq-item"><summary>Can our clients see their own travel data?</summary><div class="faq-a">Yes. Jentix includes a secure, white-label client portal where your corporate clients self-serve their own travel, trips and reports - with a hard guard that stops your margin, markup and supplier costs from ever appearing.</div></details>
+      <details class="faq-item"><summary>What reporting is included?</summary><div class="faq-a">A library of 30+ reports you can run, filter and export to PDF, CSV or Excel - and you can share a client-facing report straight to a client's dashboard. Reporting is live on the bookings you make today.</div></details>
+      <details class="faq-item"><summary>Can we use our own branding?</summary><div class="faq-a">Yes. Jentix is white-label, so the platform and the client portal carry your own logo and colours.</div></details>
+      <details class="faq-item"><summary>How do we get started?</summary><div class="faq-a">Book a demo and we'll walk you through Jentix on data that looks like yours.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="cta-box rv">
+  <span class="kicker">Ready when you are</span>
+  <h2>See your travel business clearly.</h2>
+  <p>Book a 30-minute walkthrough and we will show Jentix running on data that looks like yours.</p>
+  <a href="#contact" class="btn btn-primary">Book a demo &rarr;</a>
+</div></div></section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rv-l">
+        <span class="kicker">Book a demo</span>
+        <h2 class="contact-h">See Jentix on data like yours.</h2>
+        <p class="contact-sub">Tell us a little about your TMC and how you track performance today. We'll arrange a short call and a walkthrough of the platform.</p>
+        <p class="contact-email">Or email <a href="mailto:sales@jentix.co.uk">sales@jentix.co.uk</a></p>
+      </div>
+      <form class="contact-form rv-r" id="contact-form">
+        <div class="form-row">
+          <label>Your name<input type="text" name="name" placeholder="Jane Smith" required></label>
+          <label>Work email<input type="email" name="email" placeholder="you@company.com" required></label>
         </div>
-    </section>
-
-    <!-- KPIs -->
-    <section class="kpi-section">
-        <div class="container">
-            <div class="kpi-grid">
-                <div class="kpi">
-                    <span class="kpi-label">Monthly revenue</span>
-                    <span class="kpi-value">£428k</span>
-                    <span class="kpi-tag kpi-tag-up">+12% vs last month</span>
-                </div>
-                <div class="kpi">
-                    <span class="kpi-label">Average margin</span>
-                    <span class="kpi-value">14.8%</span>
-                    <span class="kpi-tag">Custom logic per client</span>
-                </div>
-                <div class="kpi">
-                    <span class="kpi-label">Rework rate</span>
-                    <span class="kpi-value">3.2%</span>
-                    <span class="kpi-tag kpi-tag-down">Focused on back office fixes</span>
-                </div>
-            </div>
-            <p class="kpi-note">Data and wording above are illustrative only.</p>
+        <div class="form-row">
+          <label>Company<input type="text" name="company" placeholder="Your TMC" required></label>
+          <label>Contact number<input type="tel" name="phone" placeholder="+44 7700 900000" required></label>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="section">
-        <div class="container">
-            <header class="section-header">
-                <h2>TMC Analytics & Reporting Features</h2>
-                <p>Everything you care about in a travel management company operation in one place, without digging through spreadsheets.</p>
-            </header>
-
-            <div class="feature-grid">
-                <article class="feature-card">
-                    <h3>Consultant Performance Tracking</h3>
-                    <p>Track bookings, revenue and margin by consultant, and understand where work is being reworked or picked up by back office teams.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Client Profitability Analysis</h3>
-                    <p>See how clients are booking, how profitable they are and where policies may be driving unexpected behaviour or extra work for your team.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Supplier Spend Analytics</h3>
-                    <p>Break down performance by airline, hotel, rail and other suppliers across GDS, NDC and online tools so you can support deals and targets.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Booking Quality Metrics</h3>
-                    <p>Focus on the bookings that needed fixing by ticketing, operations or accounts, not on harmless consultant self edits.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Operational Workload Reporting</h3>
-                    <p>Understand where time is going across teams, and use that to shape training, automation and headcount decisions.</p>
-                </article>
-
-                <article class="feature-card">
-                    <h3>Data Export & Custom Reports</h3>
-                    <p>Pull data into your own reports or share focused views with management without exposing the complexity underneath.</p>
-                </article>
-            </div>
-
-            <div class="feature-cta">
-                <a href="features.html" class="btn btn-outline">View all features</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how-it-works" class="section">
-        <div class="container">
-            <header class="section-header">
-                <h2>How Jentix fits into your stack</h2>
-                <p>Designed to sit alongside your existing tools, not replace them.</p>
-            </header>
-
-            <div class="steps-grid">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <h3>Connect data sources</h3>
-                    <p>Feed in exports from GDS, mid office, back office and online tools. Jentix is built around the way TMC data really looks.</p>
-                </div>
-
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <h3>Clean and standardise</h3>
-                    <p>Map consultants, clients and suppliers across systems so you can actually rely on the numbers in front of you.</p>
-                </div>
-
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <h3>Explore dashboards</h3>
-                    <p>Use clear dashboards to answer day to day questions on performance and dig into specific bookings when you need to.</p>
-                </div>
-
-                <div class="step">
-                    <span class="step-number">4</span>
-                    <h3>Decide and act</h3>
-                    <p>Take decisions on incentives, training, supplier focus and client conversations backed by data, not guesswork.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- For TMCs -->
-    <section id="for-tmcs" class="section">
-        <div class="container for-tmcs-inner">
-            <div class="for-tmcs-panel">
-                <div class="panel-card">
-                    <h3>Example consultant view</h3>
-                    <ul class="compact-list">
-                        <li><span>Bookings this month</span><span>86</span></li>
-                        <li><span>Air / hotel / rail mix</span><span>62% / 24% / 14%</span></li>
-                        <li><span>Average margin</span><span>15.2%</span></li>
-                        <li><span>Rework flagged</span><span>5 bookings</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="for-tmcs-copy">
-                <header class="section-header align-left">
-                    <h2>Built by someone who lives in TMC operations</h2>
-                    <p>Jentix is shaped around the reality of corporate travel operations, not generic SaaS ideas.</p>
-                </header>
-                <ul class="checklist">
-                    <li>Understands GDS, mid office and back office realities.</li>
-                    <li>Respects how consultants actually work day to day.</li>
-                    <li>Supports airline and supplier targets without losing sight of the client.</li>
-                    <li>Keeps data ownership and control with your business.</li>
-                </ul>
-                <p class="small-note">Specific integrations, features and pricing are agreed case by case during onboarding.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <div class="container contact-centered">
-            <header class="contact-header">
-                <h2>Interested in Jentix for your TMC?</h2>
-                <p>Share a few details and how you currently track performance. We will follow up to arrange a short call and a walkthrough of the app.</p>
-                <p class="contact-email">Or email us directly at <a href="mailto:sales@jentix.co.uk">sales@jentix.co.uk</a></p>
-            </header>
-
-            <form class="contact-form" id="contact-form">
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="name">Your name</label>
-                        <input type="text" id="name" name="name" placeholder="Jane Smith" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="email">Work email</label>
-                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="company">Company</label>
-                        <input type="text" id="company" name="company" placeholder="Your TMC name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="phone">Contact number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000" required>
-                    </div>
-                </div>
-
-                <div class="form-field">
-                    <label for="role">Role</label>
-                    <input type="text" id="role" name="role" placeholder="Head of Operations, Director, etc." required>
-                </div>
-
-                <div class="form-field">
-                    <label for="message">What would you like Jentix to help with?</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Short description of your current set up and what you want to improve." required></textarea>
-                </div>
-
-                <div class="form-field">
-                    <div class="g-recaptcha" data-sitekey="6LdT_RssAAAAAEy-JVvifaQwlJfjkhZ-QhcHk9XC"></div>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-full">Send message</button>
-                <p class="form-note" id="form-note"></p>
-            </form>
-        </div>
-    </section>
+        <label>Role<input type="text" name="role" placeholder="Head of Operations, Director..." required></label>
+        <label>What would you like Jentix to help with?<textarea name="message" rows="4" placeholder="A short description of your set up and what you want to improve." required></textarea></label>
+        <div class="g-recaptcha" data-sitekey="6LdT_RssAAAAAEy-JVvifaQwlJfjkhZ-QhcHk9XC" data-theme="dark"></div>
+        <button type="submit" class="btn btn-primary btn-full">Send message</button>
+        <p class="form-note" id="form-note"></p>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <div class="footer-left">
-            <a href="/" class="logo footer-logo">
-                <img src="static/img/Jentix - White text - No background_v2.png" alt="Jentix" class="logo-img">
-            </a>
-            <p class="footer-text">Analytics for travel management companies that want clear, honest numbers on how their operation is really performing.</p>
-        </div>
-        <div class="footer-right">
-            <ul class="footer-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How it works</a></li>
-                <li><a href="#for-tmcs">For TMCs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <p class="footer-meta">
-                Jentix Ltd. Registered in England and Wales. Company No. 16873303.<br>
-                Registered office: 82A James Carter Road, Mildenhall, IP28 7DE
-            </p>
-        </div>
+<footer>
+  <div class="wrap foot">
+    <div>
+      <img class="logo-img" src="static/img/Jentix%20-%20White%20text%20-%20No%20background_v2.png" alt="Jentix">
+      <p>The travel intelligence platform for travel management companies that want clear, honest numbers - and clients who can see their own.</p>
     </div>
+    <div>
+      <ul class="foot-links">
+        <li><a href="#features">Platform</a></li><li><a href="#portal">Client portal</a></li>
+        <li><a href="#reporting">Reporting</a></li><li><a href="mailto:sales@jentix.co.uk">sales@jentix.co.uk</a></li>
+      </ul>
+      <p class="foot-meta">Jentix Ltd. Registered in England and Wales. Company No. 16873303.<br>Registered office: 82A James Carter Road, Mildenhall, IP28 7DE</p>
+    </div>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="static/js/script.js"></script>
+<script>
+// icon injection (keeps markup tidy)
+var ICONS={
+ IC_LAYERS:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>',
+ IC_CHART:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 16v-5M13 16V8M18 16v-3"/></svg>',
+ IC_TRUCK:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7M6.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>',
+ IC_SHIELD:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>',
+ IC_REPORT:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l3 3v15H6zM14 3v4h4"/><path d="M9 13h6M9 16h6"/></svg>',
+ IC_INVOICE:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg>',
+ IC_EXPORT:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15V4M8 8l4-4 4 4M5 15v4h14v-4"/></svg>',
+ IC_PIN:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2 6 6 .5-4.5 4 1.5 6L12 16l-5 3.5 1.5-6L4 9.5 10 9z"/></svg>',
+ IC_LOCK:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:15px;height:15px"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>',
+ TICK:'<svg viewBox="0 0 24 24" fill="none" stroke="#ff7a1a" stroke-width="2.4" style="width:18px;height:18px;flex:0 0 auto"><path d="M5 12l4 4L19 6"/></svg>'
+};
+// inject icons only into their host elements (NOT a whole-body rewrite, which
+// would wipe the reCAPTCHA widget + form listeners)
+(function(){function inj(el){el.innerHTML=el.innerHTML.replace(/\{(IC_[A-Z]+|TICK)\}/g,function(m,k){return ICONS[k]||''})}
+ document.querySelectorAll('.ico,.lock,.show li').forEach(inj);})();
+
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// nav scrolled
+addEventListener('scroll',function(){document.getElementById('hdr').classList.toggle('scrolled',scrollY>20)});
+// mobile menu: hamburger opens/closes the nav; tapping a link closes it
+(function(){var h=document.getElementById('hdr'),t=document.querySelector('.nav-toggle');
+ if(t)t.addEventListener('click',function(){h.classList.toggle('open')});
+ document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});})();
+// flip word
+(function(){if(rm)return;var w=['living','single','honest','clear'],i=0,el=document.getElementById('flip');
+ setInterval(function(){i=(i+1)%w.length;el.style.opacity=0;setTimeout(function(){el.textContent=w[i];el.style.opacity=1},220)},2200);el.style.transition='opacity .22s'})();
+// reveal + counters + bars
+function countUp(el){var t=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',arrow=el.dataset.arrow,dec=(t%1!==0)?1:0,s=null;
+ function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/1100,1),v=(t*p).toFixed(dec);el.innerHTML=pre+v+suf+(arrow?' &rarr; 1':'');if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+ e.target.classList.add('in');
+ e.target.querySelectorAll&&e.target.querySelectorAll('[data-count]').forEach(function(c){if(!c._d){c._d=1;rm?c.innerHTML=(c.dataset.prefix||'')+c.dataset.count+(c.dataset.suffix||'')+(c.dataset.arrow?' &rarr; 1':''):countUp(c)}});
+ io.unobserve(e.target)})},{threshold:.2});
+document.querySelectorAll('.rv,.rv-l,.rv-r,.viz').forEach(function(el){io.observe(el)});
+// hero svg draw + bars
+var vio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+ if(!rm){var r=document.getElementById('route');r.style.transition='stroke-dashoffset 2.2s ease';r.style.strokeDashoffset='0';
+ document.querySelectorAll('#vbars rect').forEach(function(b,i){setTimeout(function(){b.setAttribute('y',200-(+b.dataset.h));b.setAttribute('height',b.dataset.h);b.style.transition='all .9s ease'},120+i*80)})}
+ vio.unobserve(e.target)})},{threshold:.3});
+var hv=document.getElementById('heroSvg');if(hv)vio.observe(hv);
+// card glow follows cursor
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px')})});
+// contact form via EmailJS (preserved from the previous site)
+if(window.emailjs){emailjs.init('OlYiaTtacsyZJBGuy');}
+(function(){var cf=document.getElementById('contact-form');if(!cf)return;
+ cf.addEventListener('submit',function(e){e.preventDefault();
+  var btn=cf.querySelector('button[type="submit"]'),note=document.getElementById('form-note');
+  btn.disabled=true;btn.textContent='Sending...';note.textContent='';
+  emailjs.sendForm('service_f71as1r','template_xdidmsf',cf)
+   .then(function(){note.textContent='Thanks! We will be in touch soon.';note.style.color='var(--blue2)';cf.reset();if(window.grecaptcha)try{grecaptcha.reset()}catch(x){}})
+   .catch(function(err){note.textContent='Something went wrong - please try again, or email sales@jentix.co.uk.';note.style.color='var(--orange)';console.error('EmailJS error:',err);})
+   .finally(function(){btn.disabled=false;btn.textContent='Send message';});});})();
+</script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+# Jentix
+
+> Jentix is a travel intelligence platform for travel management companies (TMCs). It captures every flight, hotel, rail, car and transfer booking in one record and turns it into live performance analytics, client-ready reporting, invoicing and a secure, white-label client portal.
+
+Jentix is sold to travel management companies and corporate travel agencies. The platform runs a full circle: a consultant's booking is captured live, can be reported on the instant it is made, is sent through to the back office for invoicing, and invoice numbers reconcile back automatically - so reporting is live on the business being written today and always ties to the invoice.
+
+## What Jentix does
+- Unified travel record: flights, hotels, rail, car hire and transfers in a single model, attributed to who created and changed each booking.
+- Live performance analytics by consultant, team, division and agency.
+- Supplier analytics and drill-downs across air, rail, car and hotel.
+- A client-safe, white-label client portal: corporate clients self-serve their own travel, trips and reports; margin, markup and supplier costs can never be exposed to them.
+- 30+ self-serve reports that run live, export to PDF, CSV and Excel, and can be shared straight to a client's dashboard.
+- Summary invoicing and an accounts dashboard.
+- Trip itineraries.
+
+## Who it is for
+Travel management companies (TMCs) and corporate travel agencies.
+
+## Contact
+- Website: https://jentix.io/
+- Sales: sales@jentix.co.uk
