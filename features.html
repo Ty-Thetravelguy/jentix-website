@@ -1,219 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>TMC Analytics Features - Consultant Performance, Targets & Reporting | Jentix</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jentix features for travel management companies: consultant performance tracking, margin analysis, target & incentive management, automated reporting, and client portals.">
-    <link rel="canonical" href="https://jentix.io/features.html">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="static/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features | Jentix - Travel Analytics, Reporting &amp; Client Portal for TMCs</title>
+<meta name="description" content="Everything Jentix does for travel management companies: a unified travel record, live performance and supplier analytics, a client-safe self-serve portal, 30+ reports, summary invoicing and white-label branding.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://jentix.io/features.html">
+<meta name="theme-color" content="#070d1f">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jentix">
+<meta property="og:title" content="Features | Jentix - for Travel Management Companies">
+<meta property="og:description" content="A unified travel record, live analytics, a client-safe portal, 30+ reports, invoicing and white-label branding - everything Jentix does for TMCs.">
+<meta property="og:url" content="https://jentix.io/features.html">
+<meta property="og:image" content="https://jentix.io/static/img/Hero_1120px.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Features | Jentix for TMCs">
+<meta name="twitter:description" content="A unified travel record, live analytics, a client-safe portal, 30+ reports, invoicing and white-label branding.">
+<meta name="twitter:image" content="https://jentix.io/static/img/Hero_1120px.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://jentix.io/"},
+    {"@type":"ListItem","position":2,"name":"Features","item":"https://jentix.io/features.html"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070d1f; --bg2:#0a1430; --line:#1c2c52; --ink:#eef3ff; --muted:#92a3cc;
+  --orange:#ff7a1a; --orange2:#ffae5e; --blue:#3aa0ff; --blue2:#7cc6ff;
+  --display:'Space Grotesk',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--display);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:none;margin:0;padding:0 clamp(20px,5vw,96px)}
+.kicker{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue2)}
+.field{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(900px 500px at 78% -8%,rgba(255,122,26,.16),transparent 60%),radial-gradient(800px 600px at 8% 12%,rgba(58,160,255,.16),transparent 60%),linear-gradient(var(--bg),var(--bg2));}
+.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(120,150,220,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,150,220,.05) 1px,transparent 1px);
+  background-size:54px 54px;mask-image:radial-gradient(circle at 50% 30%,#000,transparent 85%)}
+main,header,footer{position:relative;z-index:1}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(7,13,31,.62);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.nav .logo-img{height:46px;display:block}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+.nav-links a{font-size:.92rem;color:var(--muted);transition:.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a.btn-primary,.nav-links a.btn-primary:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;padding:11px 20px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:.2s;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,#ef6410,#d94e07);color:#fff;font-weight:700;box-shadow:0 10px 30px rgba(255,122,26,.34)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(255,122,26,.5)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}.btn-ghost:hover{border-color:var(--blue);color:var(--blue2)}
+.nav-toggle{display:none;background:none;border:0;color:var(--ink);cursor:pointer}
+.page-hero{padding:72px 0 28px}
+.page-hero h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.04;font-weight:700;letter-spacing:-.02em;margin:14px 0 0}
+.page-hero p{color:var(--muted);font-size:1.18rem;margin-top:18px;max-width:60ch}
+.section{padding:40px 0}
+.fblock{margin-top:46px}
+.fblock-h{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.fblock-h h2{font-size:1.5rem;font-weight:700;letter-spacing:-.01em}
+.fblock-h .num{font-family:var(--mono);color:var(--orange);font-size:.8rem;font-weight:700}
+.fb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.fitem{border:1px solid var(--line);border-radius:14px;padding:22px;background:linear-gradient(180deg,rgba(16,28,60,.7),rgba(9,17,40,.7));transition:.25s}
+.fitem:hover{transform:translateY(-4px);border-color:rgba(58,160,255,.5)}
+.fitem h3{font-size:1.06rem;font-weight:600;margin-bottom:8px}
+.fitem p{color:var(--muted);font-size:.93rem}
+.cta-box{border:1px solid var(--line);border-radius:22px;padding:56px 40px;text-align:center;margin:60px 0 96px;position:relative;overflow:hidden;
+  background:radial-gradient(700px 300px at 50% 0,rgba(255,122,26,.18),transparent 65%),linear-gradient(180deg,rgba(16,28,60,.8),rgba(9,17,40,.8))}
+.cta-box h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;letter-spacing:-.02em}
+.cta-box p{color:var(--muted);margin:14px auto 26px;max-width:46ch}
+footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12,28,.6)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.foot p{color:var(--muted);font-size:.9rem;margin-top:14px;max-width:42ch}
+.foot .logo-img{height:34px}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap;list-style:none}
+.foot-links a{color:var(--muted);font-size:.9rem}
+.foot-meta{color:#5e6e92;font-size:.78rem;margin-top:22px;font-family:var(--mono)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .6s ease,transform .85s cubic-bezier(.16,.84,.28,1)}
+.rv.in{opacity:1;transform:none}
+.fb-grid .fitem.rv{transform:translateY(48px) scale(.95)}.fb-grid .fitem.rv.in{transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+@media(max-width:900px){
+  .fb-grid,.foot{grid-template-columns:1fr}
+  .nav-toggle{display:block;font-size:1.5rem;line-height:1}
+  .nav-links{position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:rgba(7,13,31,.98);border-bottom:1px solid var(--line);padding:12px clamp(20px,5vw,96px) 20px;transform:translateY(-14px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease}
+  header.open .nav-links{transform:none;opacity:1;pointer-events:auto}
+  .nav-links li{width:100%}.nav-links a{display:block;padding:13px 0;font-size:1.02rem}.nav-links a.btn-primary{display:inline-flex;margin-top:10px}
+}
+@media(max-width:620px){.fb-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-        <a href="index.html" class="logo">
-            <img src="static/img/Jentix - White text - No background_v2.png" alt="Jentix" class="logo-img">
-        </a>
+<div class="field"></div><div class="grid-lines"></div>
 
-        <nav class="nav">
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="nav-toggle-line"></span>
-                <span class="nav-toggle-line"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html#overview">Overview</a></li>
-                <li><a href="features.html" class="nav-active">Features</a></li>
-                <li><a href="index.html#how-it-works">How it works</a></li>
-                <li><a href="index.html#for-tmcs">For TMCs</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="index.html"><img class="logo-img" src="static/img/Jentix%20-%20White%20text%20-%20No%20background_v2.png" alt="Jentix"></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html" class="active">Features</a></li>
+      <li><a href="index.html#portal">Client portal</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact" class="btn btn-primary">Book a demo</a></li>
+    </ul></nav>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </div>
 </header>
 
 <main>
-    <!-- Page Header -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Travel Analytics Software Features</h1>
-            <p>Everything TMCs need to manage consultant performance, targets, and client reporting in one platform.</p>
-        </div>
-    </section>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker">Features</span>
+    <h1>Everything Jentix does for your travel desk.</h1>
+    <p>One platform, built on a single travel record - so performance, suppliers, clients, reporting and invoicing all read from the same source, and your numbers always reconcile.</p>
+  </div>
+</section>
 
-    <!-- For Travel Agencies -->
-    <section class="section">
-        <div class="container">
-            <header class="section-header align-left">
-                <h2>Analytics for Travel Management Companies</h2>
-                <p>Tools to track consultant performance, manage incentives, and run your TMC operation with clarity.</p>
-            </header>
+<section class="section">
+  <div class="wrap">
 
-            <!-- Performance & Analytics -->
-            <div class="feature-block">
-                <div class="feature-block-header">
-                    <h3>Performance & Analytics</h3>
-                </div>
-                <div class="feature-block-content">
-                    <div class="feature-item">
-                        <h4>Performance Analytics</h4>
-                        <p>Track consultant and team performance across all travel product types - flights, accommodation, rail, car hire, and more. See real-time metrics on bookings, turnover, and profitability at individual, team, division, or agency-wide levels.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Margin & Markup Tracking</h4>
-                        <p>Full visibility into financial performance with detailed margin analysis. Compare net prices, sale prices, and profit margins across consultants, teams, suppliers, and time periods. Real-time margin warnings alert consultants when they're hitting turnover but falling short on margin requirements.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Supplier Analytics</h4>
-                        <p>Understand which suppliers drive your business. Analyse booking volumes, revenue, and margins by supplier to negotiate better rates and identify opportunities.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="fblock">
+      <div class="fblock-h rv"><span class="num">01</span><h2>Unified travel data</h2></div>
+      <div class="fb-grid">
+        <div class="fitem rv d1"><h3>One unified record</h3><p>Every flight, hotel, rail, car and transfer booking lives in a single model - attributed to who created and changed it. One truth, not five spreadsheets.</p></div>
+        <div class="fitem rv d2"><h3>The full circle</h3><p>Bookings are captured the moment they're made, reportable instantly, sent through to the back office for invoicing, and reconciled to the invoice numbers that return overnight.</p></div>
+        <div class="fitem rv d3"><h3>Always reconciled</h3><p>Because every booking ties back to its invoice automatically, the numbers you report and the numbers you bill are the same numbers.</p></div>
+      </div>
+    </div>
 
-            <!-- Targets & Incentives -->
-            <div class="feature-block">
-                <div class="feature-block-header">
-                    <h3>Targets & Incentives</h3>
-                </div>
-                <div class="feature-block-content">
-                    <div class="feature-item">
-                        <h4>Targets & Incentive Management</h4>
-                        <p>Create tiered bonus schemes with flexible thresholds for turnover and margin. Set up tier-style targets (Tier 1, Tier 2, Teir 3) with flat bonuses and uncapped volume bonuses on excess performance. Near-miss buffer zones reward consultants who come close, avoiding frustrating cliff-edge scenarios.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>"What If" Calculator</h4>
-                        <p>Consultants can plan their path to bonus with an interactive calculator. Adjust the mix of flights, accommodation, rail, and car hire to see exactly how many bookings they need. Save multiple scenarios to track different strategies and monitor progress in real-time.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Team & Individual Goals</h4>
-                        <p>Assign targets to entire teams or individual consultants. Team managers can set supplementary personal development goals alongside corporate schemes. Track who's on target, who's at risk, and who needs support.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Automated Payout Reports</h4>
-                        <p>Generate end-of-period payout reports with a single click. The system calculates each consultant's achievement, applies tier logic, and produces audit-ready reports. Built-in safety caps prevent data entry errors from triggering catastrophic bonus payouts.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="fblock">
+      <div class="fblock-h rv"><span class="num">02</span><h2>Performance &amp; analytics</h2></div>
+      <div class="fb-grid">
+        <div class="fitem rv d1"><h3>Consultant &amp; team performance</h3><p>Bookings, turnover and margin by consultant, team, division or agency - live, and attributed to who did the work.</p></div>
+        <div class="fitem rv d2"><h3>Margin &amp; yield</h3><p>See net, sale and margin across consultants, teams, suppliers and time periods, so you always know where the value is.</p></div>
+        <div class="fitem rv d3"><h3>Supplier analytics</h3><p>Drill into airlines, rail, car and hotels - volumes, fares versus taxes, content mix and lead time - to back your deals and targets.</p></div>
+      </div>
+    </div>
 
-            <!-- Organisation & Access -->
-            <div class="feature-block">
-                <div class="feature-block-header">
-                    <h3>Organisation & Access</h3>
-                </div>
-                <div class="feature-block-content">
-                    <div class="feature-item">
-                        <h4>Multi-Division Support</h4>
-                        <p>Manage multiple brands or divisions under one agency umbrella. Each division maintains separate data, suppliers, teams, and target schemes while agency leadership gets complete visibility across all operations.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Team Management</h4>
-                        <p>Organise consultants into teams and sub-teams. Team managers can monitor their group's performance, while division admins oversee broader operations. Flexible hierarchy adapts to your agency structure.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>Role-Based Access</h4>
-                        <p>Granular permissions ensure staff see only what they need. Consultants view their own performance and targets, team managers see their teams, and division admins access division-wide data. Complete audit logging tracks every access.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="fblock">
+      <div class="fblock-h rv"><span class="num">03</span><h2>Client portal, client-safe</h2></div>
+      <div class="fb-grid">
+        <div class="fitem rv d1"><h3>Secure self-serve portal</h3><p>Your corporate clients log in any time to explore their own spend, trips and reports - no more manual report requests.</p></div>
+        <div class="fitem rv d2"><h3>Client-safe by design</h3><p>A hard guard strips every margin, markup and supplier cost before anything reaches a client view. Enforced at the data layer, not by trust.</p></div>
+        <div class="fitem rv d3"><h3>Trips &amp; itineraries</h3><p>A duty-of-care view of every trip, plus the client-facing itinerary document - all on your brand.</p></div>
+      </div>
+    </div>
 
-            <!-- Data & Integration -->
-            <div class="feature-block">
-                <div class="feature-block-header">
-                    <h3>Data & Integration</h3>
-                </div>
-                <div class="feature-block-content">
-                    <div class="feature-item">
-                        <h4>Automated Data Import</h4>
-                        <p>Seamless integration with your mid-office system. Processed automatically, with intelligent attribution tracking who created and modified each booking.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="fblock">
+      <div class="fblock-h rv"><span class="num">04</span><h2>Reporting</h2></div>
+      <div class="fb-grid">
+        <div class="fitem rv d1"><h3>30+ ready reports</h3><p>Expenditure by transaction, spend breakdowns, supplier yield, invoice summaries and more - built around how a TMC really works.</p></div>
+        <div class="fitem rv d2"><h3>Run, filter, export</h3><p>Set the period and criteria - travellers, routes, references, vendors - run it live, and export to PDF, CSV or Excel.</p></div>
+        <div class="fitem rv d3"><h3>Share to a client</h3><p>Save a client-facing report straight onto that company's dashboard, under your own label.</p></div>
+      </div>
+    </div>
 
-    <!-- For Corporate Clients -->
-    <section class="section section-alt">
-        <div class="container">
-            <header class="section-header align-left">
-                <h2>Client Portal & Travel Spend Reporting</h2>
-                <p>Give your corporate clients transparency into their travel programme with the Jentix Client Portal.</p>
-                <p><strong>Coming soon</strong> - these features are currently in development.</p>
-            </header>
+    <div class="fblock">
+      <div class="fblock-h rv"><span class="num">05</span><h2>Invoicing &amp; accounts</h2></div>
+      <div class="fb-grid">
+        <div class="fitem rv d1"><h3>Summary invoicing</h3><p>Invoice on real billing cycles, per debtor account, with the schedule of bookings behind every number.</p></div>
+        <div class="fitem rv d2"><h3>Accounts dashboard</h3><p>See exactly what's ready to draft, confirm and send across your client book, grouped by billing cycle.</p></div>
+        <div class="fitem rv d3"><h3>Tied to the booking</h3><p>Every invoice line traces back to the booking it came from, so queries are answered in seconds.</p></div>
+      </div>
+    </div>
 
-            <div class="features-grid-full">
-                <article class="feature-card-large">
-                    <h3>Travel Spend Dashboard</h3>
-                    <p>Give your corporate clients complete transparency into their travel programme. Clients see their total spend, booking volumes, and travel patterns - without accessing your commercial margins.</p>
-                </article>
+    <div class="fblock">
+      <div class="fblock-h rv"><span class="num">06</span><h2>Organisation &amp; access</h2></div>
+      <div class="fb-grid">
+        <div class="fitem rv d1"><h3>Divisions &amp; teams</h3><p>Manage divisions, teams and sub-teams under one agency, with the structure your business actually uses.</p></div>
+        <div class="fitem rv d2"><h3>Role-based access</h3><p>Granular, role-based permissions mean people see only what they should - consultants their own work, managers their teams, leadership the lot.</p></div>
+        <div class="fitem rv d3"><h3>Multi-agency &amp; white-label</h3><p>Built to run as your platform, on your brand - your logo and colours throughout, for you and your clients.</p></div>
+      </div>
+    </div>
 
-                <article class="feature-card-large">
-                    <h3>Cost Centre Reporting</h3>
-                    <p>Break down travel spend by department, project, or cost centre. Clients can track budgets and identify savings opportunities across their organisation.</p>
-                </article>
+  </div>
+</section>
 
-                <article class="feature-card-large">
-                    <h3>Traveller Insights</h3>
-                    <p>Understand who's travelling, where, and how often. Policy compliance reporting helps clients manage their travel programme effectively.</p>
-                </article>
-
-                <article class="feature-card-large">
-                    <h3>Supplier Spend Analysis</h3>
-                    <p>Show clients which airlines, hotels, and car hire companies they're using most. Demonstrate value through preferred supplier compliance and negotiated savings.</p>
-                </article>
-
-                <article class="feature-card-large">
-                    <h3>Custom Branded Portals</h3>
-                    <p>White-label dashboards carry your agency branding. Clients get a professional, seamless experience that reinforces your partnership.</p>
-                </article>
-
-                <article class="feature-card-large">
-                    <h3>Self-Service Access</h3>
-                    <p>Clients log in anytime to view their data. No more manual report requests - everything they need is available on-demand with real-time updates.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-        <div class="container cta-block">
-            <h2>Ready to see Jentix in action?</h2>
-            <p>Book a demo to see how these features work for your TMC.</p>
-            <a href="index.html#contact" class="btn btn-primary">Book a demo</a>
-        </div>
-    </section>
+<section><div class="wrap"><div class="cta-box rv">
+  <span class="kicker">Ready when you are</span>
+  <h2>See it on data like yours.</h2>
+  <p>Book a 30-minute walkthrough and we'll show Jentix running on data that looks like your desk.</p>
+  <a href="index.html#contact" class="btn btn-primary">Book a demo &rarr;</a>
+</div></div></section>
 </main>
 
-<footer class="site-footer">
-    <div class="container footer-inner">
-        <div class="footer-left">
-            <a href="index.html" class="logo footer-logo">
-                <img src="static/img/Jentix - White text - No background_v2.png" alt="Jentix" class="logo-img">
-            </a>
-            <p class="footer-text">
-                Analytics for travel management companies that want clear, honest numbers on how their operation is
-                really performing.
-            </p>
-        </div>
-        <div class="footer-right">
-            <ul class="footer-links">
-                <li><a href="index.html#overview">Overview</a></li>
-                <li><a href="features.html">Features</a></li>
-                <li><a href="index.html#how-it-works">How it works</a></li>
-                <li><a href="index.html#for-tmcs">For TMCs</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <p class="footer-meta">
-                Jentix Ltd. Registered in England and Wales. Company No. 16873303.<br>
-                Registered office: 82A James Carter Road, Mildenhall, IP28 7DE
-            </p>
-        </div>
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="index.html"><img class="logo-img" src="static/img/Jentix%20-%20White%20text%20-%20No%20background_v2.png" alt="Jentix"></a>
+      <p>The travel intelligence platform for travel management companies that want clear, honest numbers - and clients who can see their own.</p>
     </div>
+    <div>
+      <ul class="foot-links">
+        <li><a href="index.html">Home</a></li><li><a href="features.html">Features</a></li>
+        <li><a href="index.html#portal">Client portal</a></li><li><a href="mailto:sales@jentix.co.uk">sales@jentix.co.uk</a></li>
+      </ul>
+      <p class="foot-meta">Jentix Ltd. Registered in England and Wales. Company No. 16873303.<br>Registered office: 82A James Carter Road, Mildenhall, IP28 7DE</p>
+    </div>
+  </div>
 </footer>
 
-<script src="static/js/script.js"></script>
+<script>
+addEventListener('scroll',function(){document.getElementById('hdr').classList.toggle('scrolled',scrollY>20)});
+(function(){var h=document.getElementById('hdr'),t=document.querySelector('.nav-toggle');
+ if(t)t.addEventListener('click',function(){h.classList.toggle('open')});
+ document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});})();
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
 </body>
 </html>
