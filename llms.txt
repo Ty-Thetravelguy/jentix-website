@@ -12,6 +12,7 @@ Jentix is sold to travel management companies and corporate travel agencies. The
 - 30+ self-serve reports that run live, export to PDF, CSV and Excel, and can be shared straight to a client's dashboard.
 - Summary invoicing and an accounts dashboard.
 - Trip itineraries.
+- Sustainability: a carbon (CO2e) figure on every booking, with defensible factors and a confidence level, for client ESG reporting.
 
 ## Who it is for
 Travel management companies (TMCs) and corporate travel agencies.

@@ -63,6 +63,7 @@
         "30+ self-serve reports with PDF, CSV and Excel export",
         "Summary invoicing and accounts dashboard",
         "Trip itineraries",
+        "Sustainability and carbon (CO2e) reporting",
         "White-label branding"
       ]
     },
@@ -74,6 +75,7 @@
         {"@type":"Question","name":"What types of bookings does Jentix handle?","acceptedAnswer":{"@type":"Answer","text":"Flights, hotels, rail, car hire and transfers, all captured in a single travel record."}},
         {"@type":"Question","name":"Can our clients see their own travel data?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jentix includes a secure, white-label client portal where your corporate clients self-serve their own travel, trips and reports, with a hard guard that stops your margin, markup and supplier costs from ever appearing."}},
         {"@type":"Question","name":"What reporting is included?","acceptedAnswer":{"@type":"Answer","text":"A library of 30+ reports you can run, filter and export to PDF, CSV or Excel, and you can share a client-facing report straight to a client's dashboard. Reporting is live on the bookings you make today."}},
+        {"@type":"Question","name":"Does Jentix report carbon emissions?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jentix puts a carbon (CO2e) figure on every booking (flights, hotels, rail, car and transfers) so your clients can report their travel emissions for ESG, with defensible factors and a confidence level on every figure."}},
         {"@type":"Question","name":"Can we use our own branding?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jentix is white-label, so the platform and the client portal carry your own logo and colours."}},
         {"@type":"Question","name":"How do we get started?","acceptedAnswer":{"@type":"Answer","text":"Book a demo and we will walk you through Jentix on data that looks like yours."}}
       ]
@@ -178,6 +180,7 @@ header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
 .card h3{font-size:1.12rem;font-weight:600;margin-bottom:8px}
 .card p{color:var(--muted);font-size:.94rem}
 .card .ico svg{width:20px;height:20px}
+.new-tag{font-family:var(--mono);font-size:.56rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#06291f;background:#34d399;border-radius:999px;padding:3px 8px;vertical-align:middle;margin-left:8px}
 
 /* showcase */
 .show{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
@@ -366,6 +369,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
       <article class="card rv d1"><div class="ico">{IC_SHIELD}</div><h3>Client portal, client-safe</h3><p>Clients log in to see their own travel, trips and reports. Your margin and markup can never appear - guaranteed.</p></article>
       <article class="card rv d2"><div class="ico">{IC_REPORT}</div><h3>Self-serve reporting</h3><p>30+ ready reports. Pick one, set the criteria, run and export to PDF, CSV or Excel - or pin it to a client's dashboard.</p></article>
       <article class="card rv d3"><div class="ico">{IC_INVOICE}</div><h3>Invoicing &amp; accounts</h3><p>Summary invoicing on real billing cycles, with an accounts dashboard that shows exactly what is ready to draft and send.</p></article>
+      <article class="card rv d1"><div class="ico">{IC_LEAF}</div><h3>Sustainability reporting <span class="new-tag">New</span></h3><p>A carbon (CO2e) figure on every booking, so your clients can report their travel emissions with confidence for ESG.</p></article>
     </div>
     <div class="rv" style="margin-top:34px"><a href="features.html" class="btn btn-ghost">View all features &rarr;</a></div>
   </div>
@@ -448,6 +452,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
       <details class="faq-item"><summary>What types of bookings does it handle?</summary><div class="faq-a">Flights, hotels, rail, car hire and transfers, all captured in a single travel record.</div></details>
       <details class="faq-item"><summary>Can our clients see their own travel data?</summary><div class="faq-a">Yes. Jentix includes a secure, white-label client portal where your corporate clients self-serve their own travel, trips and reports - with a hard guard that stops your margin, markup and supplier costs from ever appearing.</div></details>
       <details class="faq-item"><summary>What reporting is included?</summary><div class="faq-a">A library of 30+ reports you can run, filter and export to PDF, CSV or Excel - and you can share a client-facing report straight to a client's dashboard. Reporting is live on the bookings you make today.</div></details>
+      <details class="faq-item"><summary>Does Jentix report carbon emissions?</summary><div class="faq-a">Yes. Jentix puts a carbon (CO2e) figure on every booking - flights, hotels, rail, car and transfers - so your clients can report their travel emissions for ESG, with defensible factors and a confidence level on every figure.</div></details>
       <details class="faq-item"><summary>Can we use our own branding?</summary><div class="faq-a">Yes. Jentix is white-label, so the platform and the client portal carry your own logo and colours.</div></details>
       <details class="faq-item"><summary>How do we get started?</summary><div class="faq-a">Book a demo and we'll walk you through Jentix on data that looks like yours.</div></details>
     </div>
@@ -518,6 +523,7 @@ var ICONS={
  IC_INVOICE:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg>',
  IC_EXPORT:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15V4M8 8l4-4 4 4M5 15v4h14v-4"/></svg>',
  IC_PIN:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2 6 6 .5-4.5 4 1.5 6L12 16l-5 3.5 1.5-6L4 9.5 10 9z"/></svg>',
+ IC_LEAF:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 21c0-8 5-13 15-14 0 10-5 15-13 15M8 18c1-5 4-9 9-11"/></svg>',
  IC_LOCK:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:15px;height:15px"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>',
  TICK:'<svg viewBox="0 0 24 24" fill="none" stroke="#ff7a1a" stroke-width="2.4" style="width:18px;height:18px;flex:0 0 auto"><path d="M5 12l4 4L19 6"/></svg>'
 };
