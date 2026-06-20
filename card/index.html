@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyrone Francis | Founder, Jentix</title>
+<meta name="description" content="Tyrone Francis, Founder of Jentix - travel intelligence for travel management companies. Save my contact, or share yours with me.">
+<link rel="canonical" href="https://jentix.io/card/">
+<meta name="theme-color" content="#070d1f">
+<meta name="robots" content="noindex,follow">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<!-- Open Graph / social so the link unfurls with Jentix branding -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Jentix">
+<meta property="og:title" content="Tyrone Francis - Founder, Jentix">
+<meta property="og:description" content="Travel intelligence for travel management companies. Save my contact, or share yours.">
+<meta property="og:url" content="https://jentix.io/card/">
+<meta property="og:image" content="https://jentix.io/static/img/Hero_1120px.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tyrone Francis - Founder, Jentix">
+<meta name="twitter:description" content="Travel intelligence for travel management companies. Save my contact, or share yours.">
+<meta name="twitter:image" content="https://jentix.io/static/img/Hero_1120px.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+:root{
+  --bg:#070d1f; --bg2:#0a1430; --panel:#0e1c3c; --line:#1c2c52;
+  --ink:#eef3ff; --muted:#92a3cc; --orange:#ff7a1a; --orange2:#ffae5e;
+  --blue:#3aa0ff; --blue2:#7cc6ff;
+  --display:'Space Grotesk',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--display);background:var(--bg);color:var(--ink);line-height:1.55;
+  -webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:32px 18px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* brand background field (matches the homepage) */
+.field{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(900px 500px at 78% -8%,rgba(255,122,26,.16),transparent 60%),
+    radial-gradient(800px 600px at 8% 12%,rgba(58,160,255,.16),transparent 60%),
+    linear-gradient(var(--bg),var(--bg2));}
+.grid-lines{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(120,150,220,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,150,220,.05) 1px,transparent 1px);
+  background-size:54px 54px;mask-image:radial-gradient(circle at 50% 22%,#000,transparent 82%)}
+
+/* card */
+.card{position:relative;z-index:1;width:100%;max-width:460px;
+  border:1px solid var(--line);border-radius:24px;
+  background:linear-gradient(180deg,rgba(16,28,60,.82),rgba(9,17,40,.86));
+  box-shadow:0 30px 80px -30px rgba(0,0,0,.7),0 0 0 1px rgba(58,160,255,.04) inset;
+  backdrop-filter:blur(10px);padding:34px 28px 28px;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;
+  background:linear-gradient(90deg,var(--orange),var(--blue))}
+
+.logo{display:block;height:46px;width:auto;margin:0 auto 24px}
+.name{font-size:1.9rem;font-weight:700;text-align:center;letter-spacing:-.02em}
+.title{font-family:var(--mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--blue2);text-align:center;margin-top:8px}
+.title b{color:var(--orange2);font-weight:600}
+
+.rows{margin:26px 0 6px;display:grid;gap:10px}
+.row{display:flex;align-items:center;gap:14px;padding:13px 15px;border-radius:13px;
+  border:1px solid var(--line);background:rgba(7,13,31,.45);transition:.18s}
+.row:hover,.row:focus-visible{border-color:var(--blue);background:rgba(58,160,255,.08);transform:translateY(-1px);outline:none}
+.row .ic{flex:none;width:20px;height:20px;color:var(--blue2)}
+.row .lab{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.row .val{font-size:1rem;font-weight:500;color:var(--ink);word-break:break-word}
+.row .tx{display:flex;flex-direction:column;gap:1px;min-width:0}
+
+.actions{margin-top:20px;display:grid;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--display);font-size:1rem;font-weight:600;cursor:pointer;
+  padding:14px 18px;border-radius:13px;border:1px solid transparent;transition:.18s;width:100%}
+.btn .ic{width:18px;height:18px}
+.btn-primary{background:var(--orange);color:#1a0c00;border-color:var(--orange)}
+.btn-primary:hover{background:var(--orange2)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue2)}
+
+/* QR */
+.qr-wrap{margin-top:22px;display:flex;flex-direction:column;align-items:center;gap:11px}
+#qr{background:#fff;padding:12px;border-radius:14px;line-height:0;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+#qr img,#qr canvas{display:block;border-radius:4px}
+.qr-cap{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+.divider{display:flex;align-items:center;gap:14px;margin:28px 0 20px;color:var(--muted)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.divider span{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase}
+
+/* share-back form */
+.share h2{font-size:1.12rem;font-weight:600;text-align:center}
+.share p.sub{color:var(--muted);font-size:.9rem;text-align:center;margin:6px 0 18px}
+.form{display:grid;gap:13px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.form label{display:flex;flex-direction:column;gap:6px;font-family:var(--mono);
+  font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.form input{font-family:var(--display);background:rgba(7,13,31,.6);border:1px solid var(--line);
+  border-radius:10px;padding:12px 13px;color:var(--ink);font-size:.95rem;font-weight:400;
+  letter-spacing:normal;text-transform:none;width:100%}
+.form input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px rgba(58,160,255,.18)}
+.g-recaptcha{display:flex;justify-content:center}
+.note{font-size:.95rem;min-height:1.2em;margin:2px 0 0;text-align:center;color:var(--blue2)}
+
+footer{position:relative;z-index:1;color:var(--muted);font-size:.74rem;text-align:center;margin-top:22px}
+footer a{color:var(--blue2)}
+
+@media(max-width:420px){
+  .form-row{grid-template-columns:1fr}
+  .name{font-size:1.65rem}
+  .card{padding:28px 20px 24px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="field"></div>
+<div class="grid-lines"></div>
+
+<main class="card">
+  <img class="logo" src="/static/img/Jentix%20-%20White%20text%20-%20No%20background_v2.png" alt="Jentix">
+  <h1 class="name">Tyrone Francis</h1>
+  <p class="title">Founder <b>&middot; Jentix</b></p>
+
+  <div class="rows">
+    <a class="row" href="mailto:tyrone@jentix.co.uk">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <span class="tx"><span class="lab">Email</span><span class="val">tyrone@jentix.co.uk</span></span>
+    </a>
+    <a class="row" href="tel:+447902393729">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      <span class="tx"><span class="lab">Mobile</span><span class="val">07902 393 729</span></span>
+    </a>
+    <a class="row" href="https://jentix.io" target="_blank" rel="noopener">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+      <span class="tx"><span class="lab">Website</span><span class="val">jentix.io</span></span>
+    </a>
+  </div>
+
+  <div class="qr-wrap">
+    <div id="qr" aria-label="QR code with Tyrone Francis contact details"></div>
+    <p class="qr-cap">Scan to save my contact</p>
+  </div>
+
+  <div class="actions">
+    <a class="btn btn-ghost" href="/card/tyrone-francis.vcf" download>
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      Save to Contacts
+    </a>
+  </div>
+
+  <div class="divider"><span>Or share yours</span></div>
+
+  <section class="share">
+    <h2>Send me your details</h2>
+    <p class="sub">No paper cards, better for the environment.</p>
+    <form class="form" id="card-form">
+      <div class="form-row">
+        <label>Name<input type="text" name="name" autocomplete="name" placeholder="Jane Smith" required></label>
+        <label>Company<input type="text" name="company" autocomplete="organization" placeholder="Acme Travel"></label>
+      </div>
+      <label>Email<input type="email" name="email" autocomplete="email" placeholder="jane@acmetravel.com" required></label>
+      <label>Mobile<input type="tel" name="phone" autocomplete="tel" placeholder="07000 000 000"></label>
+      <input type="hidden" name="role" value="Contact shared via jentix.io/card">
+      <input type="hidden" name="message" value="">
+      <div class="g-recaptcha" data-sitekey="6LdT_RssAAAAAEy-JVvifaQwlJfjkhZ-QhcHk9XC" data-theme="dark"></div>
+      <button type="submit" class="btn btn-ghost">Send</button>
+      <p class="note" id="card-note"></p>
+    </form>
+  </section>
+</main>
+
+<footer>Jentix Ltd &middot; <a href="https://jentix.io">jentix.io</a></footer>
+
+<script src="/static/js/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+// The vCard encoded in the on-screen QR. Keep in sync with /card/tyrone-francis.vcf.
+var VCARD = [
+  'BEGIN:VCARD','VERSION:3.0','N:Francis;Tyrone;;;','FN:Tyrone Francis',
+  'ORG:Jentix','TITLE:Founder','TEL;TYPE=CELL:+447902393729',
+  'EMAIL;TYPE=WORK,INTERNET:tyrone@jentix.co.uk','URL:https://jentix.io','END:VCARD'
+].join('\n');
+
+// Render the QR (dark navy on white for reliable scanning).
+if(window.QRCode){
+  new QRCode(document.getElementById('qr'),{
+    text:VCARD,width:200,height:200,
+    colorDark:'#070d1f',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M
+  });
+}
+
+// Share-back form -> same EmailJS pipe as the homepage contact form. We fold
+// phone + company into `message` so the existing template surfaces everything
+// even though it was written for the contact form.
+if(window.emailjs){emailjs.init('OlYiaTtacsyZJBGuy');}
+(function(){
+  var f=document.getElementById('card-form');if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('button[type="submit"]'),note=document.getElementById('card-note');
+    f.message.value='Shared via jentix.io/card\nName: '+f.name.value+'\nEmail: '+f.email.value+
+      '\nMobile: '+(f.phone.value||'-')+'\nCompany: '+(f.company.value||'-');
+    btn.disabled=true;btn.textContent='Sending...';note.textContent='';note.style.color='var(--blue2)';
+    emailjs.sendForm('service_f71as1r','template_xdidmsf',f)
+      .then(function(){note.textContent='Thanks.';f.reset();if(window.grecaptcha)try{grecaptcha.reset()}catch(x){}})
+      .catch(function(err){note.textContent='Hmm, that did not send - try once more.';note.style.color='var(--orange)';console.error('EmailJS error:',err);})
+      .finally(function(){btn.disabled=false;btn.textContent='Send';});
+  });
+})();
+</script>
+</body>
+</html>
