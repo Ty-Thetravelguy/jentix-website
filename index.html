@@ -141,7 +141,9 @@ header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
 .hero{padding:84px 0 64px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
 .hero h1{font-size:clamp(2.6rem,5.4vw,4.5rem);line-height:1.02;font-weight:700;letter-spacing:-.02em;margin:18px 0 0}
-.hero h1 .flip{color:var(--orange);position:relative;display:inline-block;min-width:5ch}
+.hero h1 .flip{color:var(--orange);display:inline-grid;justify-items:center;vertical-align:baseline}
+.hero h1 .flip>span{grid-area:1/1;opacity:0;transition:opacity .3s ease}
+.hero h1 .flip>span.on{opacity:1}
 .hero p.sub{font-size:1.18rem;color:var(--muted);margin:22px 0 30px;max-width:33ch}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
@@ -301,7 +303,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
   <div class="wrap hero-grid">
     <div>
       <span class="kicker">Travel intelligence for TMCs</span>
-      <h1>Every booking.<br>One <span class="flip" id="flip">living</span> record.</h1>
+      <h1>Every booking.<br>One <span class="flip" id="flip"><span class="on">living</span><span>single</span><span>honest</span><span>clear</span></span> record.</h1>
       <p class="sub">Jentix turns every flight, hotel, rail and car booking into one clear, living view of how your travel business performs - and lets your clients see their own.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Book a demo &rarr;</a>
@@ -542,8 +544,8 @@ addEventListener('scroll',function(){document.getElementById('hdr').classList.to
  if(t)t.addEventListener('click',function(){h.classList.toggle('open')});
  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open')})});})();
 // flip word
-(function(){if(rm)return;var w=['living','single','honest','clear'],i=0,el=document.getElementById('flip');
- setInterval(function(){i=(i+1)%w.length;el.style.opacity=0;setTimeout(function(){el.textContent=w[i];el.style.opacity=1},220)},2200);el.style.transition='opacity .22s'})();
+(function(){if(rm)return;var box=document.getElementById('flip'),w=box.children,i=0;
+ setInterval(function(){w[i].classList.remove('on');i=(i+1)%w.length;w[i].classList.add('on')},2200)})();
 // reveal + counters + bars
 function countUp(el){var t=parseFloat(el.dataset.count),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'',arrow=el.dataset.arrow,dec=(t%1!==0)?1:0,s=null;
  function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/1100,1),v=(t*p).toFixed(dec);el.innerHTML=pre+v+suf+(arrow?' &rarr; 1':'');if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
