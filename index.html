@@ -215,7 +215,7 @@ header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
 .loop-step p{color:var(--muted);font-size:.9rem}
 
 /* FAQ */
-.faq{max-width:920px;display:grid;gap:12px}
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
 .faq-item{border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,rgba(16,28,60,.6),rgba(9,17,40,.6));overflow:hidden}
 .faq-item summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;font-size:1.04rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
 .faq-item summary::-webkit-details-marker{display:none}
@@ -260,6 +260,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
   .hero-grid,.show,.foot,.loop-grid,.contact-grid{grid-template-columns:1fr}
   .loop-steps,.form-row{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr 1fr}
+  .faq{grid-template-columns:1fr}
   .hero p.sub{max-width:none}
   .nav-toggle{display:block;font-size:1.5rem;line-height:1}
   /* working mobile menu: hamburger drops the links + CTA down from the bar */
