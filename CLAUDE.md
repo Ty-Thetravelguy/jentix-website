@@ -1,67 +1,88 @@
-# CLAUDE.md
+# CLAUDE.md - jentix-website
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code in the Jentix MARKETING site repo. This is the static
+site at https://jentix.io (GitHub Pages), NOT the Django app (that lives in
+C:\Jentix\jentix-v2 and has its own CLAUDE.md).
 
-## Project Overview
+## Deployment - read this first
 
-Jentix is a static HTML/CSS/JavaScript marketing website for a travel analytics platform designed for Travel Management Companies (TMCs). The site showcases product features, explains how the platform works, and includes a contact form for demo bookings.
-
-## Development
-
-### Serving Locally
-
-No build step is required. Serve the static files directly:
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Node.js
-npx http-server
-
-# PHP
-php -S localhost:8000
-```
-
-Visit `http://localhost:8000`
-
-### No Build/Test/Lint Tools Configured
-
-This is a simple static site with no package.json, bundlers, or testing frameworks.
+Pushing to `main` deploys LIVE via GitHub Pages (domain via CNAME).
+NEVER push without the owner's explicit go-ahead. Work on a branch or local
+commits; the owner reviews in a browser first, then says send.
 
 ## Architecture
 
-### File Structure
+Plain HTML/CSS/JS, no build step. EVERY page is self-contained: all CSS and JS
+are inline in the page itself, so design tokens are duplicated per file and a
+change to shared chrome (nav, footer, toast) must be applied to each page.
 
-- `index.html` - Single-page marketing site with all sections
-- `static/css/style.css` - All styling with CSS variables for theming
-- `static/js/script.js` - Mobile nav toggle, smooth scrolling, form handling
+- `index.html` - homepage (hero, marquee, platform cards, duty-of-care map,
+  targets ladder, portal, reporting, FAQ, CTA, contact form, footer)
+- `features.html` - grouped feature catalogue (09 numbered groups)
+- `privacy.html` - privacy policy (two-column, sticky index)
+- `card/index.html` - Tyrone's digital business card. UNLISTED (noindex, not
+  in sitemap). Do not link it from the site. Leave alone unless asked.
+- `llms.txt` - canonical AI-readable messaging summary. Treat it as the source
+  of truth for what the site claims; update it DELIBERATELY with any claim change.
+- `robots.txt` (welcomes AI crawlers), `sitemap.xml` (3 URLs), CNAME,
+  favicons at repo root.
 
-### Page Sections
+Design tokens (in each page's `:root`): bg #070d1f / #0a1430, line #1c2c52,
+ink #eef3ff, muted #92a3cc, orange #ff7a1a / #ffae5e, blue #3aa0ff / #7cc6ff.
+Fonts: Space Grotesk (display) + JetBrains Mono (mono), via Google Fonts.
+Full-width `.wrap` with fluid clamp() gutters, scroll reveals via
+IntersectionObserver, `prefers-reduced-motion` respected everywhere (CSS kill
+switch + JS `rm` flag).
 
-The single-page site has these anchored sections:
-- `#overview` - Hero with value proposition and KPI snapshot
-- `#features` - 6-card grid of product capabilities
-- `#how-it-works` - 4-step process flow
-- `#for-tmcs` - TMC-specific value proposition
-- `#contact` - Contact form (currently demo only, no backend)
+## Local preview
 
-### CSS Theming
+`python -m http.server 8901` from the repo root (pick any free port EXCEPT
+8765 - Forcepoint squats on it on this machine). The reCAPTCHA widget only
+renders on the real domain over https - an empty box locally is expected, do
+not "fix" it.
 
-Uses CSS custom properties defined in `:root`:
-- Primary background: `#050816` (dark navy)
-- Accent: `#4f46e5` (indigo)
-- Responsive breakpoints at 720px and 960px
+## DO NOT BREAK
 
-### JavaScript
+- The contact form (index.html): reCAPTCHA script + sitekey, EmailJS SDK,
+  `emailjs.init('OlYiaTtacsyZJBGuy')`,
+  `sendForm('service_f71as1r','template_xdidmsf', ...)`, form `#contact-form`.
+  card/index.html has its own independent copy.
+- Icon injection is SCOPED (`.ico,.lock,.show li`) - never innerHTML-rewrite
+  the whole body; it would wipe the reCAPTCHA widget and form listeners.
+- The visible FAQ accordion and the FAQPage JSON-LD in `<head>` MUST stay in
+  sync word-for-word (Google requirement). Same for the JSON-LD featureList
+  vs what the page claims.
+- `MAP_DOTS` / `MAP_MARKS` in index.html are GENERATED from the Django app's
+  Natural Earth GeoJSON (jentix-v2 risk/static/risk/world-countries.json) by a
+  scratch script - regenerate, never hand-edit.
 
-Vanilla ES6+ with no dependencies:
-- Mobile hamburger menu toggle (`.nav-open` class)
-- Smooth scroll with sticky header offset calculation
-- Form submission handler (shows demo message, resets form)
+## MESSAGING RULES (hard - owner-set, do not drift)
 
-## Key Considerations
+1. NEVER advertise invoicing, accounts dashboards, reconciliation, billing
+   workflows, or the "full circle" loop (removed 2026-07-09). The future
+   client invoice portal is explicitly NOT advertised. Jentix is marketed as
+   the INTELLIGENCE layer (performance, targets, carbon, duty of care,
+   reporting, portal) - never as an operational system agencies depend on
+   day-to-day.
+2. Ground EVERY claim in the real jentix-v2 system; do not invent features.
+   Verified counts as of 2026-07-09: 51 built-in reports across 13 categories
+   (site says "50+"), 12 booking types, 226 countries monitored, 3 official
+   risk sources (UK FCDO, US State Department, GDACS).
+3. Duty of care wording: "official travel advisories and disaster alerts,
+   matched to your travellers". NEVER "keeps travellers safe" (liability).
+4. Never the word "Bill" - use "Invoice" if ever unavoidable in legal copy.
+   The profit ratio is "yield", never "markup" (saying the portal HIDES
+   "margin / markup" is fine - that names what clients cannot see).
+5. No CO2 methodology vendor names on the site (no DEFRA / Google TIM):
+   say "recognised, defensible factors and a confidence level".
+6. No back-office vendor names (Midoco, Dolphin, ProCON) in marketing copy.
+   Naming official public data sources (FCDO, State Dept, GDACS) is fine.
+7. Colour-blind-safe visuals (the owner is red/green colour-blind): never
+   encode meaning in red-vs-green; the map ramp is wheat -> orange on a muted
+   blue base.
+8. Keep source files pure ASCII: HTML entities (&pound; &rarr; &middot;) in
+   markup, \u escapes in JS strings. No emojis anywhere.
 
-- Form submission is demo only - needs backend integration for actual functionality
-- Sticky header height affects scroll offset calculations
-- Dark theme throughout - maintain color scheme consistency
+## Reference
+
+Design/decision record for the 2026-07 refresh: `docs/WEBSITE_REFRESH_2026-07.md`.
