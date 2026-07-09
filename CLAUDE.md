@@ -19,6 +19,9 @@ change to shared chrome (nav, footer, toast) must be applied to each page.
 - `index.html` - homepage (hero, marquee, platform cards, duty-of-care map,
   targets ladder, portal, reporting, FAQ, CTA, contact form, footer)
 - `features.html` - grouped feature catalogue (09 numbered groups)
+- `about.html` - founder-led About page (story, principles, founder, company
+  facts). Resources/blog is deliberately PARKED until there are more clients -
+  do not add one unprompted (a stale blog is worse than none).
 - `privacy.html` - privacy policy (two-column, sticky index)
 - `card/index.html` - Tyrone's digital business card. UNLISTED (noindex, not
   in sitemap). Do not link it from the site. Leave alone unless asked.

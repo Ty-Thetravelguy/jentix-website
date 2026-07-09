@@ -19,6 +19,11 @@ Jentix is sold to travel management companies and corporate travel agencies. Eve
 ## Who it is for
 Travel management companies (TMCs) and corporate travel agencies.
 
+## Company
+Jentix is founder-led: built, run and supported by Tyrone Francis (Jentix Ltd,
+Company No. 16873303, registered in England and Wales). It was designed inside
+the day-to-day of business travel. More: https://jentix.io/about.html
+
 ## Contact
 - Website: https://jentix.io/
 - Sales: sales@jentix.co.uk

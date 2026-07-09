@@ -95,6 +95,18 @@ Housekeeping
 - Portal: client-safe guard + fence middleware; CO2 tab live; duty-of-care
   tab shipped (per-client switch, module-gated).
 
+## Added during owner review (2026-07-09)
+
+- Hero visual upgraded on owner feedback ("needs a wow"): the bar chart is
+  replaced by a rotating dot-globe (vanilla canvas, orthographic projection of
+  the same Natural Earth dots) with great-circle flight arcs, advisory pulses,
+  atmosphere glow and drag-to-spin. Capped at 400px after owner sized it.
+- about.html added (owner call): founder-led story, three principles, founder
+  block (Tyrone Francis), company facts, Person/AboutPage schema; Organization
+  schema on index gains a founder; footers, sitemap, llms.txt updated.
+- Resources/blog PARKED (owner decision): revisit once there are a few more
+  clients; evergreen undated guides (not a dated blog) is the agreed shape.
+
 ## Still to do (later phases)
 
 - privacy.html: add duty-of-care processing purpose to the processor section
