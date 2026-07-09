@@ -160,6 +160,8 @@ header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
 .viz-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .viz-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(255,122,26,.18)}
 .viz svg{width:100%;height:auto;display:block}
+.globe-cv{width:min(100%,400px);margin:0 auto;aspect-ratio:1/1;display:block;cursor:grab;touch-action:pan-y}
+.globe-cv:active{cursor:grabbing}
 .viz-foot{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
 .chip{border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:rgba(8,16,38,.6)}
 .chip .n{font-family:var(--mono);font-weight:700;font-size:1.3rem;color:var(--ink)}
@@ -348,31 +350,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
     </div>
     <div class="viz">
       <div class="viz-head"><span class="kicker">live</span><span class="viz-dot"></span></div>
-      <svg viewBox="0 0 460 230" id="heroSvg" aria-hidden="true">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#3aa0ff"/><stop offset="1" stop-color="#ff7a1a"/>
-          </linearGradient>
-        </defs>
-        <line x1="14" y1="200" x2="446" y2="200" stroke="#1c2c52" stroke-width="1"/>
-        <g id="vbars">
-          <rect x="22"  y="200" width="22" height="0" rx="3" fill="#244a8a" data-h="44"/>
-          <rect x="54"  y="200" width="22" height="0" rx="3" fill="#2f6fb8" data-h="70"/>
-          <rect x="86"  y="200" width="22" height="0" rx="3" fill="#2a5da0" data-h="52"/>
-          <rect x="118" y="200" width="22" height="0" rx="3" fill="#3a8fdf" data-h="96"/>
-          <rect x="150" y="200" width="22" height="0" rx="3" fill="#2f6fb8" data-h="64"/>
-          <rect x="182" y="200" width="22" height="0" rx="3" fill="#ff7a1a" data-h="120"/>
-          <rect x="214" y="200" width="22" height="0" rx="3" fill="#3a8fdf" data-h="80"/>
-          <rect x="246" y="200" width="22" height="0" rx="3" fill="#ff7a1a" data-h="134"/>
-          <rect x="278" y="200" width="22" height="0" rx="3" fill="#46a6ff" data-h="72"/>
-          <rect x="310" y="200" width="22" height="0" rx="3" fill="#ff9d4d" data-h="108"/>
-          <rect x="342" y="200" width="22" height="0" rx="3" fill="#3a8fdf" data-h="60"/>
-          <rect x="374" y="200" width="22" height="0" rx="3" fill="#ff7a1a" data-h="126"/>
-          <rect x="406" y="200" width="22" height="0" rx="3" fill="#5bb6ff" data-h="88"/>
-        </g>
-        <path d="M16,150 C120,150 150,80 240,86 C330,92 360,56 444,46" fill="none" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="520" stroke-dashoffset="520" id="route" opacity=".9"/>
-        <circle r="4.5" fill="#fff" id="pip"><animateMotion dur="3.4s" repeatCount="indefinite" path="M16,150 C120,150 150,80 240,86 C330,92 360,56 444,46"/></circle>
-      </svg>
+      <canvas id="heroGlobe" class="globe-cv" aria-label="Rotating globe of travel activity: flight routes drawing between cities, with advisory pulses"></canvas>
       <div class="viz-foot">
         <div class="chip"><div class="n" data-count="51">0</div><div class="l">built-in reports</div></div>
         <div class="chip"><div class="n" data-count="226">0</div><div class="l">countries watched</div></div>
@@ -627,12 +605,7 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isInte
  e.target.querySelectorAll&&e.target.querySelectorAll('[data-count]').forEach(function(c){if(!c._d){c._d=1;rm?c.innerHTML=(c.dataset.prefix||'')+c.dataset.count+(c.dataset.suffix||'')+(c.dataset.arrow?' &rarr; 1':''):countUp(c)}});
  io.unobserve(e.target)})},{threshold:.2});
 document.querySelectorAll('.rv,.rv-l,.rv-r,.viz').forEach(function(el){io.observe(el)});
-// hero svg draw + bars
-var vio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
- if(!rm){var r=document.getElementById('route');r.style.transition='stroke-dashoffset 2.2s ease';r.style.strokeDashoffset='0';
- document.querySelectorAll('#vbars rect').forEach(function(b,i){setTimeout(function(){b.setAttribute('y',200-(+b.dataset.h));b.setAttribute('height',b.dataset.h);b.style.transition='all .9s ease'},120+i*80)})}
- vio.unobserve(e.target)})},{threshold:.3});
-var hv=document.getElementById('heroSvg');if(hv)vio.observe(hv);
+// (the hero globe module lives further down, after MAP_DOTS is defined)
 // card glow follows cursor
 document.querySelectorAll('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px')})});
 
@@ -668,6 +641,81 @@ var MAP_MARKS={"TR":[600,136.3],"PH":[843.9,240.9],"CL":[300.3,443]};
   if(al)setTimeout(function(){al.classList.add('in')},rm?0:900);
   mio.unobserve(e.target)})},{threshold:.25});
  mio.observe(cv);})();
+
+// ---- hero globe: rotating dot-earth with flight arcs (vanilla canvas) ----
+// Reuses MAP_DOTS: equirect px -> lat/lon -> unit sphere, rotated + projected
+// orthographically each frame. Drag to spin; pauses offscreen; static in
+// reduced-motion.
+(function(){
+ var cv=document.getElementById('heroGlobe');if(!cv||typeof MAP_DOTS==='undefined')return;
+ var ctx=cv.getContext('2d');if(!ctx)return;
+ var DPR=Math.min(window.devicePixelRatio||1,2),W=0,CX=0,CY=0,R=0;
+ function size(){var w=cv.clientWidth||460;W=w;cv.width=W*DPR;cv.height=W*DPR;
+  ctx.setTransform(DPR,0,0,DPR,0,0);CX=W/2;CY=W/2;R=W*0.415}
+ var TILT=0.36,ct=Math.cos(TILT),st=Math.sin(TILT);
+ // precompute unit vectors from the equirect dot grid
+ var N=MAP_DOTS.length,PX=new Float32Array(N),PY=new Float32Array(N),PZ=new Float32Array(N),PG=new Uint8Array(N);
+ for(var i=0;i<N;i++){var d=MAP_DOTS[i],lon=(d[0]*0.36-180)*Math.PI/180,lat=(74-d[1]*0.26)*Math.PI/180;
+  PX[i]=Math.cos(lat)*Math.sin(lon);PY[i]=Math.sin(lat);PZ[i]=Math.cos(lat)*Math.cos(lon);PG[i]=d[2]}
+ var GT=[[96,130,196],[244,227,178],[255,174,94],[255,122,26]];
+ function vec(lat,lon,alt){lat*=Math.PI/180;lon*=Math.PI/180;var c=Math.cos(lat),m=1+(alt||0);
+  return [c*Math.sin(lon)*m,Math.sin(lat)*m,c*Math.cos(lon)*m]}
+ function slerp(a,b,t,alt){var d=a[0]*b[0]+a[1]*b[1]+a[2]*b[2];d=Math.min(1,Math.max(-1,d));
+  var o=Math.acos(d),so=Math.sin(o)||1e-6,ka=Math.sin((1-t)*o)/so,kb=Math.sin(t*o)/so,m=1+alt*Math.sin(Math.PI*t);
+  return [(a[0]*ka+b[0]*kb)*m,(a[1]*ka+b[1]*kb)*m,(a[2]*ka+b[2]*kb)*m]}
+ var HUB={LHR:[51.47,-0.45],JFK:[40.64,-73.78],DXB:[25.25,55.36],SIN:[1.36,103.99],CPT:[-33.97,18.6],SYD:[-33.95,151.18]};
+ var ROUTES=[['LHR','JFK'],['LHR','DXB'],['LHR','SIN'],['LHR','CPT'],['DXB','SYD']];
+ var SAMP=56,arcs=ROUTES.map(function(rt,i){var a=vec.apply(0,HUB[rt[0]]),b=vec.apply(0,HUB[rt[1]]),pts=[];
+  for(var s=0;s<=SAMP;s++)pts.push(slerp(a,b,s/SAMP,0.16));return {pts:pts,off:i*1.7}});
+ var hubs=Object.keys(HUB).map(function(k){return vec.apply(0,HUB[k])});
+ var marks=[MAP_MARKS.TR,MAP_MARKS.PH,MAP_MARKS.CL].filter(Boolean).map(function(m){
+  return vec(74-m[1]*0.26,m[0]*0.36-180,0)});
+ function rotP(v,rot){var x=v[0]*Math.cos(rot)+v[2]*Math.sin(rot),z=-v[0]*Math.sin(rot)+v[2]*Math.cos(rot),y=v[1];
+  var y2=y*ct-z*st,z2=y*st+z*ct;return [CX+x*R,CY-y2*R,z2]}
+ function draw(rot,ts,full){ctx.clearRect(0,0,W,W);
+  var g=ctx.createRadialGradient(CX,CY,R*0.82,CX,CY,R*1.16);
+  g.addColorStop(0,'rgba(58,160,255,0)');g.addColorStop(0.78,'rgba(58,160,255,.15)');g.addColorStop(1,'rgba(58,160,255,0)');
+  ctx.fillStyle=g;ctx.beginPath();ctx.arc(CX,CY,R*1.16,0,6.2832);ctx.fill();
+  ctx.fillStyle='rgba(14,28,60,.55)';ctx.beginPath();ctx.arc(CX,CY,R,0,6.2832);ctx.fill();
+  var cr=Math.cos(rot),sr=Math.sin(rot);
+  for(var i=0;i<N;i++){var x=PX[i]*cr+PZ[i]*sr,z=-PX[i]*sr+PZ[i]*cr,y=PY[i];
+   var y2=y*ct-z*st,z2=y*st+z*ct;if(z2<0)continue;
+   var c=GT[PG[i]],a=PG[i]?(0.55+z2*0.45):(0.2+z2*0.5);
+   ctx.fillStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+a.toFixed(3)+')';
+   ctx.beginPath();ctx.arc(CX+x*R,CY-y2*R,(PG[i]?0.0028:0.0022)*W+z2*0.0026*W,0,6.2832);ctx.fill()}
+  for(var k=0;k<arcs.length;k++){var A=arcs[k],head=1,tail=0;
+   if(!full){var tt=((ts/1000+A.off)%8)/8;head=Math.min(1,tt/0.42);tail=Math.max(0,(tt-0.52)/0.42);if(tail>=1)continue}
+   var hi=Math.round(head*SAMP),ti=Math.round(tail*SAMP),prev=null;
+   ctx.lineWidth=1.6;ctx.lineCap='round';
+   for(var s=ti;s<=hi;s++){var p=rotP(A.pts[s],rot);
+    if(p[2]<0.03){prev=null;continue}
+    if(prev){var mx=s/SAMP,al=0.16+p[2]*0.6;
+     ctx.strokeStyle='rgba('+Math.round(58+197*mx)+','+Math.round(160-38*mx)+','+Math.round(255-229*mx)+','+al.toFixed(3)+')';
+     ctx.beginPath();ctx.moveTo(prev[0],prev[1]);ctx.lineTo(p[0],p[1]);ctx.stroke()}
+    prev=p}
+   if(!full&&head<1&&hi<=SAMP){var hp=rotP(A.pts[hi],rot);
+    if(hp[2]>0.03){ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(hp[0],hp[1],2.2,0,6.2832);ctx.fill()}}}
+  for(var h=0;h<hubs.length;h++){var q=rotP(hubs[h],rot);if(q[2]<0.05)continue;
+   ctx.fillStyle='rgba(124,198,255,'+(0.45+q[2]*0.55).toFixed(3)+')';
+   ctx.beginPath();ctx.arc(q[0],q[1],2.4,0,6.2832);ctx.fill()}
+  for(var m2=0;m2<marks.length;m2++){var p2=rotP(marks[m2],rot);if(p2[2]<0.05)continue;
+   var pp=full?0.35:((ts/1000)/2.2+m2/3)%1,pr=3+pp*14,pa=(1-pp)*0.5*(0.4+p2[2]*0.6);
+   ctx.strokeStyle='rgba(255,122,26,'+pa.toFixed(3)+')';ctx.lineWidth=1.6;
+   ctx.beginPath();ctx.arc(p2[0],p2[1],pr,0,6.2832);ctx.stroke();
+   ctx.fillStyle='#ff7a1a';ctx.beginPath();ctx.arc(p2[0],p2[1],2.2,0,6.2832);ctx.fill()}}
+ var rot=-0.55,vel=0.0028,dragging=false,lastX=0,run=false;
+ function loop(ts){if(!run)return;if(!dragging)rot+=vel;draw(rot,ts,false);requestAnimationFrame(loop)}
+ cv.addEventListener('pointerdown',function(e){dragging=true;lastX=e.clientX;
+  if(cv.setPointerCapture)try{cv.setPointerCapture(e.pointerId)}catch(x){}});
+ cv.addEventListener('pointermove',function(e){if(!dragging)return;
+  rot+=(e.clientX-lastX)*0.005;lastX=e.clientX;if(rm)draw(rot,0,true)});
+ addEventListener('pointerup',function(){dragging=false});
+ addEventListener('resize',function(){size();if(rm||!run)draw(rot,0,true)});
+ size();
+ var gio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){if(rm){draw(rot,0,true)}else if(!run){run=true;requestAnimationFrame(loop)}}
+  else{run=false}})},{threshold:.15});
+ gio.observe(cv);})();
 
 // ---- targets ladder: live projected bonus (highest tier wins) ----
 (function(){
