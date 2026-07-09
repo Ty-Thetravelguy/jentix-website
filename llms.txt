@@ -1,16 +1,18 @@
 # Jentix
 
-> Jentix is a travel intelligence platform for travel management companies (TMCs). It captures every flight, hotel, rail, car and transfer booking in one record and turns it into live performance analytics, client-ready reporting, invoicing and a secure, white-label client portal.
+> Jentix is a travel intelligence platform for travel management companies (TMCs). It captures every booking in one record and turns it into live performance analytics, consultant targets, carbon insight, duty-of-care monitoring and client-ready reporting - with a secure, white-label client portal.
 
-Jentix is sold to travel management companies and corporate travel agencies. The platform runs a full circle: a consultant's booking is captured live, can be reported on the instant it is made, is sent through to the back office for invoicing, and invoice numbers reconcile back automatically - so reporting is live on the business being written today and always ties to the invoice.
+Jentix is sold to travel management companies and corporate travel agencies. Everything works off a single unified travel record: a consultant's booking is captured and is reportable the moment it is made, so reporting is live on the business being written today.
 
 ## What Jentix does
-- Unified travel record: flights, hotels, rail, car hire and transfers in a single model, attributed to who created and changed each booking.
+- Unified travel record: flights, hotels, rail, car hire and transfers - twelve booking types in all - in a single model, attributed to who created and changed each booking.
 - Live performance analytics by consultant, team, division and agency.
+- Duty of care: official government travel advisories (UK FCDO, US State Department) and GDACS disaster alerts, monitored around the clock and matched to travellers' actual bookings - who is in an affected country now, who arrives next, with in-app alerts and an optional client-portal view.
+- Consultant targets and incentives: tiered schemes with gates, a live My Targets page with a projected bonus for every consultant, and payout reports with a full audit trail.
 - Supplier analytics and drill-downs across air, rail, car and hotel.
+- Traveller intelligence: departure and arrival manifests, traveller tracking, booking lead-time analysis and advance-purchase savings.
 - A client-safe, white-label client portal: corporate clients self-serve their own travel, trips and reports; margin, markup and supplier costs can never be exposed to them.
-- 30+ self-serve reports that run live, export to PDF, CSV and Excel, and can be shared straight to a client's dashboard.
-- Summary invoicing and an accounts dashboard.
+- 50+ self-serve reports across 13 categories that run live, export to PDF, CSV and Excel, can be shared straight to a client's dashboard, or sent as a secure link with expiry and access logging.
 - Trip itineraries.
 - Sustainability: a carbon (CO2e) figure on every booking, with defensible factors and a confidence level, for client ESG reporting.
 
