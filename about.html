@@ -88,9 +88,17 @@ header.scrolled{background:rgba(7,13,31,.9);border-bottom-color:var(--line)}
 .page-hero h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.04;font-weight:700;letter-spacing:-.02em;margin:14px 0 0;max-width:22ch}
 .page-hero p{color:var(--muted);font-size:1.18rem;margin-top:18px;max-width:58ch}
 .section{padding:40px 0}
+.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:start}
 .story{max-width:68ch;display:grid;gap:18px}
 .story p{color:var(--muted);font-size:1.06rem}
 .story p b{color:var(--ink);font-weight:600}
+.fpanel{border:1px solid var(--line);border-radius:18px;padding:20px;
+  background:linear-gradient(180deg,rgba(16,28,60,.85),rgba(9,17,40,.85));box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.fp-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:6px}
+.fp-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(255,122,26,.18)}
+.fp-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.fp-row:last-child{border-bottom:0}
+.fp-row .v{font-family:var(--mono);color:var(--blue2);font-weight:700}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
 .pitem{border:1px solid var(--line);border-radius:14px;padding:24px;background:linear-gradient(180deg,rgba(16,28,60,.7),rgba(9,17,40,.7));transition:.25s}
 .pitem:hover{transform:translateY(-4px);border-color:rgba(58,160,255,.5)}
@@ -132,7 +140,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
 .rv.in{opacity:1;transform:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 @media(max-width:900px){
-  .pgrid,.foot{grid-template-columns:1fr}
+  .pgrid,.foot,.story-grid{grid-template-columns:1fr}
   .founder{grid-template-columns:1fr}
   .nav-toggle{display:block;font-size:1.5rem;line-height:1}
   .nav-links{position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:rgba(7,13,31,.98);border-bottom:1px solid var(--line);padding:12px clamp(20px,5vw,96px) 20px;transform:translateY(-14px);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .25s ease}
@@ -171,10 +179,21 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px;background:rgba(7,12
 
 <section class="section">
   <div class="wrap">
+    <div class="story-grid">
     <div class="story rv">
       <p>Jentix wasn't built by a software company guessing at what a TMC does. It was designed and built <b>inside the day-to-day of business travel</b> - around the Monday-morning questions, the month-end pressure, and the client who wants their numbers now, not at the end of the quarter.</p>
       <p>That's why it cares about the unglamorous things: attribution that survives when a consultant changes teams, figures a client can safely see, carbon numbers you can defend, and knowing where your travellers are when the news changes.</p>
       <p>And it's why Jentix deliberately stays in its lane. It <b>reads your business and makes it clearer</b> - it never sits between your consultants and a booking. Nothing about your day depends on us, which is exactly how a sharp tool should behave.</p>
+    </div>
+    <aside class="fpanel rv d1" aria-label="Jentix fact file">
+      <div class="fp-head"><span class="kicker" style="color:var(--muted)">JENTIX &middot; fact file</span><span class="fp-dot"></span></div>
+      <div class="fp-row"><span>Built-in reports</span><span class="v">51</span></div>
+      <div class="fp-row"><span>Report categories</span><span class="v">13</span></div>
+      <div class="fp-row"><span>Booking types in one record</span><span class="v">12</span></div>
+      <div class="fp-row"><span>Countries watched</span><span class="v">226</span></div>
+      <div class="fp-row"><span>Official risk feeds</span><span class="v">3</span></div>
+      <div class="fp-row"><span>Margin a client can see</span><span class="v">none</span></div>
+    </aside>
     </div>
 
     <div class="pgrid">
