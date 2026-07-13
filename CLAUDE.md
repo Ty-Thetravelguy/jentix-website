@@ -68,8 +68,10 @@ not "fix" it.
    reporting, portal) - never as an operational system agencies depend on
    day-to-day.
 2. Ground EVERY claim in the real jentix-v2 system; do not invent features.
-   Verified counts as of 2026-07-09: 51 built-in reports across 13 categories
-   (site says "50+"), 12 booking types, 226 countries monitored, 3 official
+   Verified counts as of 2026-07-13: 43 built-in reports (13 internal
+   categories, shown to users as 6 catalogue groups); the site now says "40+"
+   and leads with reporting capability rather than a raw count. 12 booking
+   types, 226 countries monitored, 3 official
    risk sources (UK FCDO, US State Department, GDACS).
 3. Duty of care wording: "official travel advisories and disaster alerts,
    matched to your travellers". NEVER "keeps travellers safe" (liability).
